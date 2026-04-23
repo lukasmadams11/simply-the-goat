@@ -13,7 +13,7 @@ export default function SectionHeader({
   return (
     <div className={`${alignment} max-w-3xl`}>
       {eyebrow && (
-        <p className="font-sans text-sm uppercase tracking-widest text-ochre mb-4">
+        <p className="font-sans text-sm font-semibold uppercase tracking-widest text-ochre mb-4">
           {eyebrow}
         </p>
       )}

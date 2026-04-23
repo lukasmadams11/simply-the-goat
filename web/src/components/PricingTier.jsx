@@ -22,7 +22,7 @@ export default function PricingTier({
       }`}
     >
       <p
-        className={`font-sans text-xs uppercase tracking-widest ${eyebrow}`}
+        className={`font-sans text-xs font-semibold uppercase tracking-widest ${eyebrow}`}
       >
         {featured ? 'Most requested' : 'Tier'}
       </p>
@@ -32,7 +32,7 @@ export default function PricingTier({
       </p>
 
       <div className={`mt-6 pt-6 border-t ${divider}`}>
-        <p className={`font-sans text-xs uppercase tracking-widest ${eyebrow}`}>
+        <p className={`font-sans text-xs font-semibold uppercase tracking-widest ${eyebrow}`}>
           Typical engagement
         </p>
         <p className={`mt-2 font-serif text-2xl ${title}`}>{typical}</p>

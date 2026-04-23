@@ -1,6 +1,7 @@
 import { ClipboardCheck, Truck, FileText } from 'lucide-react'
 import SectionHeader from '../components/SectionHeader'
 import ContactForm from '../components/ContactForm'
+import Seo from '../components/Seo'
 
 const steps = [
   {
@@ -23,6 +24,11 @@ const steps = [
 export default function Contact() {
   return (
     <>
+      <Seo
+        title="Contact"
+        path="/contact"
+        description="Request a wildfire-mitigation site assessment. Share your parcel details and we'll return a scoped deployment plan within two business days."
+      />
       <section className="bg-cream border-b border-forest/10">
         <div className="max-w-6xl mx-auto px-6 py-20 md:py-28">
           <SectionHeader
@@ -41,7 +47,7 @@ export default function Contact() {
 
           <aside className="space-y-8">
             <div>
-              <p className="font-sans text-xs uppercase tracking-widest text-ochre">
+              <p className="font-sans text-xs font-semibold uppercase tracking-widest text-ochre">
                 What to expect
               </p>
               <h2 className="mt-2 font-serif text-3xl text-forest">
@@ -61,7 +67,7 @@ export default function Contact() {
                     )}
                   </div>
                   <div className="pb-2">
-                    <p className="font-sans text-xs uppercase tracking-widest text-ochre">
+                    <p className="font-sans text-xs font-semibold uppercase tracking-widest text-ochre">
                       Step {i + 1}
                     </p>
                     <h3 className="font-serif text-xl text-forest">{title}</h3>
@@ -74,7 +80,7 @@ export default function Contact() {
             </ol>
 
             <div className="border-t border-forest/10 pt-6">
-              <p className="font-sans text-xs uppercase tracking-widest text-ochre">
+              <p className="font-sans text-xs font-semibold uppercase tracking-widest text-ochre">
                 Direct line
               </p>
               <p className="mt-2 font-sans text-slate">

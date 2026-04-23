@@ -1,5 +1,7 @@
 import { useState } from 'react'
-import { Send, CheckCircle2 } from 'lucide-react'
+import { Send, CheckCircle2, AlertCircle, Loader2 } from 'lucide-react'
+
+const ENDPOINT = import.meta.env.VITE_FORMSPREE_ENDPOINT
 
 const vegetationOptions = [
   { value: '', label: 'Select vegetation type' },
@@ -31,18 +33,48 @@ const inputClass =
   'w-full px-4 py-3 bg-cream border border-forest/15 font-sans text-sm text-slate placeholder:text-slate/40 focus:outline-none focus:border-ochre focus:ring-1 focus:ring-ochre'
 
 const labelClass =
-  'block font-sans text-xs uppercase tracking-widest text-forest mb-2'
+  'block font-sans text-xs font-semibold uppercase tracking-widest text-forest mb-2'
 
 export default function ContactForm() {
   const [values, setValues] = useState(initialState)
   const [submitted, setSubmitted] = useState(false)
+  const [submitting, setSubmitting] = useState(false)
+  const [error, setError] = useState(null)
 
   const update = (field) => (e) =>
     setValues((v) => ({ ...v, [field]: e.target.value }))
 
-  const onSubmit = (e) => {
+  const onSubmit = async (e) => {
     e.preventDefault()
-    setSubmitted(true)
+    setSubmitting(true)
+    setError(null)
+
+    try {
+      if (ENDPOINT) {
+        const res = await fetch(ENDPOINT, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            Accept: 'application/json',
+          },
+          body: JSON.stringify(values),
+        })
+        if (!res.ok) {
+          throw new Error(
+            `Our form service responded with an error (${res.status}). Please try again or call us directly.`
+          )
+        }
+      } else if (import.meta.env.PROD) {
+        throw new Error(
+          'The contact form is not fully configured yet. Please call us directly while we finish setup.'
+        )
+      }
+      setSubmitted(true)
+    } catch (err) {
+      setError(err.message ?? 'Something went wrong. Please try again.')
+    } finally {
+      setSubmitting(false)
+    }
   }
 
   if (submitted) {
@@ -61,7 +93,7 @@ export default function ContactForm() {
   }
 
   return (
-    <form onSubmit={onSubmit} className="space-y-5" noValidate>
+    <form onSubmit={onSubmit} className="space-y-5">
       <div className="grid md:grid-cols-2 gap-5">
         <div>
           <label htmlFor="name" className={labelClass}>
@@ -192,11 +224,32 @@ export default function ContactForm() {
         />
       </div>
 
+      {error && (
+        <div
+          role="alert"
+          aria-live="polite"
+          className="flex gap-3 border border-ochre/40 bg-ochre/5 text-ochre px-4 py-3 font-sans text-sm"
+        >
+          <AlertCircle size={18} className="shrink-0 mt-0.5" aria-hidden="true" />
+          <p>{error}</p>
+        </div>
+      )}
+
       <button
         type="submit"
-        className="inline-flex items-center gap-2 bg-forest text-cream px-7 py-3 font-sans text-sm font-semibold uppercase tracking-widest hover:bg-forest/90 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-ochre focus-visible:ring-offset-2 focus-visible:ring-offset-cream"
+        disabled={submitting}
+        className="inline-flex items-center gap-2 bg-forest text-cream px-7 py-3 font-sans text-sm font-semibold uppercase tracking-widest hover:bg-forest/90 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-ochre focus-visible:ring-offset-2 focus-visible:ring-offset-cream disabled:opacity-60 disabled:cursor-not-allowed"
       >
-        Submit Request <Send size={16} aria-hidden="true" />
+        {submitting ? (
+          <>
+            Sending
+            <Loader2 size={16} className="animate-spin" aria-hidden="true" />
+          </>
+        ) : (
+          <>
+            Submit Request <Send size={16} aria-hidden="true" />
+          </>
+        )}
       </button>
     </form>
   )

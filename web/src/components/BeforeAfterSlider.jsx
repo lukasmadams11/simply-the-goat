@@ -64,10 +64,10 @@ export default function BeforeAfterSlider({
           {after}
         </div>
 
-        <span className="absolute top-3 left-3 bg-forest/85 text-cream font-sans text-[10px] uppercase tracking-widest px-2 py-1">
+        <span className="absolute top-3 left-3 bg-forest/85 text-cream font-sans text-[10px] font-semibold uppercase tracking-widest px-2 py-1">
           {beforeLabel}
         </span>
-        <span className="absolute top-3 right-3 bg-ochre text-cream font-sans text-[10px] uppercase tracking-widest px-2 py-1">
+        <span className="absolute top-3 right-3 bg-ochre text-cream font-sans text-[10px] font-semibold uppercase tracking-widest px-2 py-1">
           {afterLabel}
         </span>
 

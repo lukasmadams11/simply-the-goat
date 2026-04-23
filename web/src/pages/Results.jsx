@@ -3,6 +3,7 @@ import StatCard from '../components/StatCard'
 import EcoImpactTracker from '../components/EcoImpactTracker'
 import BeforeAfterSlider from '../components/BeforeAfterSlider'
 import BrushPlotSVG from '../components/BrushPlotSVG'
+import Seo from '../components/Seo'
 
 const headlineStats = [
   {
@@ -46,6 +47,11 @@ const caseStudies = [
 export default function Results() {
   return (
     <>
+      <Seo
+        title="Results"
+        path="/results"
+        description="Measured wildfire mitigation outcomes: 1,240 acres managed, 386 tons of fuel removed, +18% soil health. Verified with Brown's transect sampling and fuel-load assessments."
+      />
       <section className="bg-cream border-b border-forest/10">
         <div className="max-w-6xl mx-auto px-6 py-20 md:py-28">
           <SectionHeader
@@ -107,7 +113,7 @@ export default function Results() {
                 key={client}
                 className="bg-cream border border-forest/10 p-8 flex flex-col"
               >
-                <p className="font-sans text-xs uppercase tracking-widest text-ochre">
+                <p className="font-sans text-xs font-semibold uppercase tracking-widest text-ochre">
                   {acres} acres
                 </p>
                 <h3 className="mt-3 font-serif text-2xl text-forest">

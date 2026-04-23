@@ -12,7 +12,7 @@ export default function StatCard({ value, label, sub, tone = 'cream' }) {
     <article
       className={`${bg} border ${border} px-8 py-10 flex flex-col`}
     >
-      <p className={`font-sans text-xs uppercase tracking-widest ${labelColor}`}>
+      <p className={`font-sans text-xs font-semibold uppercase tracking-widest ${labelColor}`}>
         {label}
       </p>
       <p

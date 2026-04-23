@@ -2,6 +2,7 @@ import { Shield, Leaf, Heart, ArrowRight } from 'lucide-react'
 import Hero from '../components/Hero'
 import Button from '../components/Button'
 import SectionHeader from '../components/SectionHeader'
+import Seo from '../components/Seo'
 
 const pillars = [
   {
@@ -30,6 +31,10 @@ const stats = [
 export default function Home() {
   return (
     <>
+      <Seo
+        path="/"
+        description="Simply the GOAT — professional wildfire mitigation through targeted goat grazing. Defensible space, ecological restoration, ethical herd care."
+      />
       <Hero
         eyebrow="Wildfire Mitigation"
         headline={
@@ -89,7 +94,7 @@ export default function Home() {
               <p className="font-serif text-5xl md:text-6xl text-forest">
                 {value}
               </p>
-              <p className="mt-3 font-sans text-sm uppercase tracking-widest text-slate/70">
+              <p className="mt-3 font-sans text-sm font-semibold uppercase tracking-widest text-slate/70">
                 {label}
               </p>
             </div>

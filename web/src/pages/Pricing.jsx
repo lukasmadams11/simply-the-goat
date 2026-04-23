@@ -3,6 +3,7 @@ import SectionHeader from '../components/SectionHeader'
 import PricingTier from '../components/PricingTier'
 import CostFactor from '../components/CostFactor'
 import FAQ from '../components/FAQ'
+import Seo from '../components/Seo'
 
 const tiers = [
   {
@@ -90,6 +91,11 @@ const faq = [
 export default function Pricing() {
   return (
     <>
+      <Seo
+        title="Pricing"
+        path="/pricing"
+        description="Transparent pricing scoped to your land. Three deployment tiers plus the terrain, density, and access factors that shape every quote."
+      />
       <section className="bg-cream border-b border-forest/10">
         <div className="max-w-6xl mx-auto px-6 py-20 md:py-28">
           <SectionHeader

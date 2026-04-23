@@ -1,6 +1,7 @@
 import { Flame, Heart, Check, X, Video } from 'lucide-react'
 import SectionHeader from '../components/SectionHeader'
 import GoatBio from '../components/GoatBio'
+import Seo from '../components/Seo'
 
 const comparison = [
   { trait: 'Ignition risk (sparks, hot exhaust)', goats: false, mowers: true },
@@ -53,6 +54,11 @@ const goats = [
 export default function About() {
   return (
     <>
+      <Seo
+        title="About"
+        path="/about"
+        description="A fire-safety company that happens to raise goats. Meet the team and the herd behind Simply the GOAT's wildfire mitigation deployments."
+      />
       <section className="bg-cream border-b border-forest/10">
         <div className="max-w-6xl mx-auto px-6 py-20 md:py-28">
           <SectionHeader
@@ -100,7 +106,7 @@ export default function About() {
             tone="forest"
           />
           <div className="mt-12 border border-cream/15">
-            <div className="grid grid-cols-[1fr_auto_auto] font-sans text-xs uppercase tracking-widest bg-cream/5">
+            <div className="grid grid-cols-[1fr_auto_auto] font-sans text-xs font-semibold uppercase tracking-widest bg-cream/5">
               <div className="px-5 py-4 text-cream/70">Trait</div>
               <div className="px-5 py-4 text-center text-ochre">Goats</div>
               <div className="px-5 py-4 text-center text-cream/60">Mowers</div>
@@ -137,7 +143,7 @@ export default function About() {
                 key={m.name}
                 className="bg-cream border border-forest/10 p-8"
               >
-                <p className="font-sans text-xs uppercase tracking-widest text-ochre">
+                <p className="font-sans text-xs font-semibold uppercase tracking-widest text-ochre">
                   {m.role}
                 </p>
                 <h3 className="mt-2 font-serif text-2xl text-forest">

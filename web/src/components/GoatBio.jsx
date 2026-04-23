@@ -44,7 +44,7 @@ export default function GoatBio({ name, role, body, palette = 'a' }) {
         <GoatPortrait palette={palette} />
       </div>
       <div className="p-6">
-        <p className="font-sans text-xs uppercase tracking-widest text-ochre">
+        <p className="font-sans text-xs font-semibold uppercase tracking-widest text-ochre">
           {role}
         </p>
         <h3 className="mt-2 font-serif text-2xl text-forest">{name}</h3>

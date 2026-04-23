@@ -14,7 +14,7 @@ export default function Hero({ eyebrow, headline, sub, children }) {
       <div className="max-w-6xl mx-auto px-6 pt-24 pb-32 md:pt-32 md:pb-40">
         <div className="max-w-3xl">
           {eyebrow && (
-            <p className="font-sans text-sm uppercase tracking-widest text-ochre mb-5">
+            <p className="font-sans text-sm font-semibold uppercase tracking-widest text-ochre mb-5">
               {eyebrow}
             </p>
           )}

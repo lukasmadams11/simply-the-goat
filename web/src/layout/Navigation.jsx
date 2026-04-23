@@ -12,7 +12,7 @@ const links = [
 
 const linkClass = ({ isActive }) =>
   [
-    'font-sans text-sm uppercase tracking-widest pb-1 transition-colors',
+    'font-sans text-sm font-semibold uppercase tracking-widest pb-1 transition-colors',
     isActive
       ? 'text-forest border-b-2 border-ochre'
       : 'text-slate hover:text-forest',
@@ -76,7 +76,7 @@ export default function Navigation() {
                 end={end}
                 className={({ isActive }) =>
                   [
-                    'block font-sans text-base uppercase tracking-widest py-2 transition-colors',
+                    'block font-sans text-base font-semibold uppercase tracking-widest py-2 transition-colors',
                     isActive ? 'text-ochre' : 'text-slate hover:text-forest',
                   ].join(' ')
                 }

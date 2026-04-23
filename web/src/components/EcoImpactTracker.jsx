@@ -27,7 +27,7 @@ export default function EcoImpactTracker() {
             <Icon size={22} aria-hidden="true" />
           </div>
           <div>
-            <p className="font-sans text-xs uppercase tracking-widest text-ochre">
+            <p className="font-sans text-xs font-semibold uppercase tracking-widest text-ochre">
               {label}
             </p>
             <p className="mt-2 font-serif text-3xl text-forest leading-tight">
