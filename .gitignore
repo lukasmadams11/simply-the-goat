@@ -1,0 +1,16 @@
+# Editor / workspace
+.claude/
+.vscode/
+.idea/
+*.swp
+.DS_Store
+
+# Vite / Node artifacts (also ignored inside web/, here as belt-and-suspenders)
+**/.vite/
+**/node_modules/
+**/dist/
+
+# Env files with secrets
+.env
+.env.local
+.env.*.local
