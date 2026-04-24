@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Simply the GOAT</title>
+    <script type="text/javascript">
+      // SPA redirect trick for GitHub Pages.
+      // Converts /simply-the-goat/about → /simply-the-goat/?/about
+      // which index.html then rewrites back to /simply-the-goat/about
+      // via history.replaceState so React Router sees the correct route.
+      var segmentCount = 1 // 1 = repo name in path (user.github.io/repo/)
+      var l = window.location
+      l.replace(
+        l.protocol +
+          '//' +
+          l.hostname +
+          (l.port ? ':' + l.port : '') +
+          l.pathname.split('/').slice(0, 1 + segmentCount).join('/') +
+          '/?/' +
+          l.pathname
+            .slice(1)
+            .split('/')
+            .slice(segmentCount)
+            .join('/')
+            .replace(/&/g, '~and~') +
+          (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
+          l.hash
+      )
+    </script>
+  </head>
+  <body></body>
+</html>

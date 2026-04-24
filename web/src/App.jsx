@@ -8,10 +8,12 @@ import About from './pages/About'
 import Pricing from './pages/Pricing'
 import Contact from './pages/Contact'
 
+const basename = import.meta.env.BASE_URL.replace(/\/$/, '')
+
 export default function App() {
   return (
     <HelmetProvider>
-      <BrowserRouter>
+      <BrowserRouter basename={basename}>
         <ScrollToTop />
         <Routes>
           <Route element={<Layout />}>
