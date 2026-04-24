@@ -2,6 +2,7 @@ import { Flame, Heart, Check, X, Video } from 'lucide-react'
 import SectionHeader from '../components/SectionHeader'
 import GoatBio from '../components/GoatBio'
 import Seo from '../components/Seo'
+import { goat1, goat2, goat3 } from '../assets/images'
 
 const comparison = [
   { trait: 'Ignition risk (sparks, hot exhaust)', goats: false, mowers: true },
@@ -14,9 +15,9 @@ const comparison = [
 
 const team = [
   {
-    name: 'Mara Delacroix',
-    role: 'Founder & Lead Herder',
-    body: 'Former Cal Fire vegetation management specialist. Built the herd after a decade watching mechanical crews fall short on steep terrain.',
+    name: 'Jim Guggenhime',
+    role: 'Founder',
+    body: 'Goat herder for 20 years, worked with Cal Fire. Loves goats.',
   },
   {
     name: 'James Okafor',
@@ -36,18 +37,21 @@ const goats = [
     role: 'Lead Doe',
     body: 'Eleven years old. Reads a hillside the way a foreman reads blueprints — her route becomes the herd’s route.',
     palette: 'a',
+    photo: goat1,
   },
   {
     name: 'Atlas',
     role: 'Brush Specialist',
     body: 'Fearless with mature chaparral. Clears ladder fuels that would otherwise require a crew and a chipper.',
     palette: 'b',
+    photo: goat2,
   },
   {
     name: 'Sable',
     role: 'Perimeter Doe',
     body: 'Quiet, precise, and patient. Works cleanly along fence lines without stressing neighbors or pets.',
     palette: 'c',
+    photo: goat3,
   },
 ]
 

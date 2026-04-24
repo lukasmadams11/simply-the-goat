@@ -1,10 +1,19 @@
 import HillsideSVG from './HillsideSVG'
+import { hero as heroPhoto } from '../assets/images'
 
 export default function Hero({ eyebrow, headline, sub, children }) {
   return (
     <section className="relative overflow-hidden">
       <div className="absolute inset-0 -z-10">
-        <HillsideSVG className="w-full h-full" />
+        {heroPhoto ? (
+          <img
+            src={heroPhoto}
+            alt=""
+            className="w-full h-full object-cover"
+          />
+        ) : (
+          <HillsideSVG className="w-full h-full" />
+        )}
         <div
           aria-hidden="true"
           className="absolute inset-0 bg-gradient-to-b from-cream/20 via-transparent to-cream"

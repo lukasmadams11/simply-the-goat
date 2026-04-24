@@ -4,6 +4,27 @@ import EcoImpactTracker from '../components/EcoImpactTracker'
 import BeforeAfterSlider from '../components/BeforeAfterSlider'
 import BrushPlotSVG from '../components/BrushPlotSVG'
 import Seo from '../components/Seo'
+import { before as beforePhoto, after as afterPhoto } from '../assets/images'
+
+const BeforeVisual = beforePhoto ? (
+  <img
+    src={beforePhoto}
+    alt="Parcel before goat grazing"
+    className="w-full h-full object-cover"
+  />
+) : (
+  <BrushPlotSVG state="before" className="w-full h-full" />
+)
+
+const AfterVisual = afterPhoto ? (
+  <img
+    src={afterPhoto}
+    alt="Parcel after goat grazing"
+    className="w-full h-full object-cover"
+  />
+) : (
+  <BrushPlotSVG state="after" className="w-full h-full" />
+)
 
 const headlineStats = [
   {
@@ -93,8 +114,8 @@ export default function Results() {
           />
           <div className="mt-10">
             <BeforeAfterSlider
-              before={<BrushPlotSVG state="before" className="w-full h-full" />}
-              after={<BrushPlotSVG state="after" className="w-full h-full" />}
+              before={BeforeVisual}
+              after={AfterVisual}
               caption="Representative rendering — real client photography coming in 2026."
             />
           </div>

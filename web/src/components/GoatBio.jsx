@@ -37,11 +37,19 @@ function GoatPortrait({ palette }) {
   )
 }
 
-export default function GoatBio({ name, role, body, palette = 'a' }) {
+export default function GoatBio({ name, role, body, palette = 'a', photo }) {
   return (
     <article className="bg-cream border border-forest/10 overflow-hidden flex flex-col">
       <div className="aspect-square w-full">
-        <GoatPortrait palette={palette} />
+        {photo ? (
+          <img
+            src={photo}
+            alt={name}
+            className="w-full h-full object-cover"
+          />
+        ) : (
+          <GoatPortrait palette={palette} />
+        )}
       </div>
       <div className="p-6">
         <p className="font-sans text-xs font-semibold uppercase tracking-widest text-ochre">
