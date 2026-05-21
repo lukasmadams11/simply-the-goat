@@ -74,8 +74,7 @@ export default function About() {
             <p className="mt-5 font-sans text-slate/80 leading-relaxed">
               The goats are partners, not equipment. They graze the plants they
               choose to graze, rest when they need to rest, and return to
-              pasture after every job. A licensed veterinarian oversees their
-              welfare year-round.
+              pasture after every job.
             </p>
           </article>
         </div>

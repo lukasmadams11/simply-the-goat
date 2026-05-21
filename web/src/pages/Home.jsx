@@ -18,7 +18,7 @@ const pillars = [
   {
     icon: Heart,
     title: 'Ethical Partnership',
-    body: 'Our goats are partners, not tools. Low-stress handling, veterinary care, and daily welfare checks are non-negotiable on every deployment.',
+    body: 'Our goats are partners, not tools. Low-stress handling and daily welfare checks are non-negotiable on every deployment.',
   },
 ]
 
