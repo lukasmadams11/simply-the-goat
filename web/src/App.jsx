@@ -7,6 +7,7 @@ import Results from './pages/Results'
 import About from './pages/About'
 import Pricing from './pages/Pricing'
 import Contact from './pages/Contact'
+import Assets from './pages/Assets'
 
 const basename = import.meta.env.BASE_URL.replace(/\/$/, '')
 
@@ -22,6 +23,7 @@ export default function App() {
             <Route path="about" element={<About />} />
             <Route path="pricing" element={<Pricing />} />
             <Route path="contact" element={<Contact />} />
+            <Route path="assets" element={<Assets />} />
           </Route>
         </Routes>
       </BrowserRouter>

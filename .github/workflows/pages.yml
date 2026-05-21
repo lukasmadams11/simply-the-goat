@@ -33,6 +33,8 @@ jobs:
 
       - name: Build
         run: npm run build -- --base=/simply-the-goat/
+        env:
+          VITE_FORMSPREE_ENDPOINT: https://formspree.io/f/xpqndrjp
 
       - uses: actions/upload-pages-artifact@v3
         with:

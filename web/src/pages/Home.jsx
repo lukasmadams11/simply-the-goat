@@ -23,8 +23,8 @@ const pillars = [
 ]
 
 const stats = [
-  { value: '30+', label: 'Acres Cleared' },
-  { value: '80%', label: 'Fuel Load Reduction' },
+  { value: '20yrs', label: 'Field Experience' },
+  { value: '0', label: 'Sparks Generated' },
   { value: '0', label: 'Gallons of Fuel Burned' },
 ]
 

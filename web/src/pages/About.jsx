@@ -1,8 +1,6 @@
 import { Flame, Heart, Check, X, Video } from 'lucide-react'
 import SectionHeader from '../components/SectionHeader'
-import GoatBio from '../components/GoatBio'
 import Seo from '../components/Seo'
-import { goat1, goat2, goat3 } from '../assets/images'
 
 const comparison = [
   { trait: 'Ignition risk (sparks, hot exhaust)', goats: false, mowers: true },
@@ -16,42 +14,23 @@ const comparison = [
 const team = [
   {
     name: 'Jim Guggenhime',
-    role: 'Founder',
-    body: 'Goat herder for 20 years, worked with Cal Fire. Loves goats.',
+    role: 'Founder & Director of Operations',
+    body: `Jim brings a wealth of hands-on wildland management experience to the field, having built his career protecting some of Colorado's most valued landscapes. With deep roots in the Front Range, Jim has spearheaded complex mitigation projects for high-profile institutions, including securing the campus perimeters at the University of Colorado Boulder and the Boulder Researchers Center. His expertise in biological land management has been trusted by civic organizations like Boulder Parks and Recreation and Colorado Highway Services to manage large-scale civic fuel reduction. Beyond his institutional work, Jim is deeply dedicated to safeguarding private Boulder homes — a commitment to community safety that has earned his methods recognition in several regional magazines.`,
   },
   {
-    name: 'James Okafor',
-    role: 'Operations & Logistics',
-    body: 'Plans deployments, portable fencing, and water logistics. Keeps the herd moving safely and on schedule.',
+    name: 'Ethan Wenter',
+    role: 'Animal Whisperer',
+    body: `Serving as our "eagle in the sky," Ethan maintains continuous, round-the-clock overwatch of our deployments. With deep intuition and a watchful eye, he monitors the herd closely day and night to ensure their safety and operational success.`,
   },
   {
-    name: 'Dr. Priya Ramanan, DVM',
-    role: 'Veterinary Lead',
-    body: 'On-site welfare checks before and after every deployment. Oversees herd nutrition, vaccination, and parasite control.',
-  },
-]
-
-const goats = [
-  {
-    name: 'Juniper',
-    role: 'Lead Doe',
-    body: 'Eleven years old. Reads a hillside the way a foreman reads blueprints — her route becomes the herd’s route.',
-    palette: 'a',
-    photo: goat1,
+    name: 'Ryan Bartusek',
+    role: 'sUAS Data Collector',
+    body: `Ryan architects the aerial intelligence network that drives our deployments. Operating between our hubs in the Colorado Front Range and the Sierra Nevada foothills, he specializes in Drone-in-a-Box (DiaB) operations, geospatial analysis, and custom Python-driven AI modeling. By processing real-time LiDAR and photogrammetry, Ryan ensures our biological mitigation units are deployed with exact, mathematically verified precision.`,
   },
   {
-    name: 'Atlas',
-    role: 'Brush Specialist',
-    body: 'Fearless with mature chaparral. Clears ladder fuels that would otherwise require a crew and a chipper.',
-    palette: 'b',
-    photo: goat2,
-  },
-  {
-    name: 'Sable',
-    role: 'Perimeter Doe',
-    body: 'Quiet, precise, and patient. Works cleanly along fence lines without stressing neighbors or pets.',
-    palette: 'c',
-    photo: goat3,
+    name: 'Luke Adams',
+    role: 'sUAS Data Collector & Biological Operations Lead',
+    body: `Luke bridges the critical gap between aerial telemetry and ground-level execution. While he engineers the same advanced drone mapping and geospatial modeling as the rest of the sUAS team, Luke's expertise extends directly into the herd. He serves as our hands-on tactical liaison, ensuring our biological mitigation units move in perfect synchronization with our topographic data.`,
   },
 ]
 
@@ -61,7 +40,7 @@ export default function About() {
       <Seo
         title="About"
         path="/about"
-        description="A fire-safety company that happens to raise goats. Meet the team and the herd behind Simply the GOAT's wildfire mitigation deployments."
+        description="A fire-safety company that happens to raise goats. Meet the team behind Simply the GOAT's wildfire mitigation deployments."
       />
       <section className="bg-cream border-b border-forest/10">
         <div className="max-w-6xl mx-auto px-6 py-20 md:py-28">
@@ -141,7 +120,7 @@ export default function About() {
             eyebrow="The Team"
             title="People who answer the phone."
           />
-          <div className="mt-12 grid md:grid-cols-3 gap-6">
+          <div className="mt-12 grid md:grid-cols-2 gap-6">
             {team.map((m) => (
               <article
                 key={m.name}
@@ -157,20 +136,6 @@ export default function About() {
                   {m.body}
                 </p>
               </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="bg-cream border-t border-forest/10">
-        <div className="max-w-6xl mx-auto px-6 py-20 md:py-24">
-          <SectionHeader
-            eyebrow="The Herd"
-            title="Meet a few of our partners."
-          />
-          <div className="mt-12 grid md:grid-cols-3 gap-6">
-            {goats.map((g) => (
-              <GoatBio key={g.name} {...g} />
             ))}
           </div>
         </div>

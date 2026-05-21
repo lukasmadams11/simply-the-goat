@@ -3,15 +3,15 @@ import { Wind, Volume2 } from 'lucide-react'
 const metrics = [
   {
     icon: Wind,
-    value: '14,200 lbs',
+    value: 'Zero direct emissions',
     label: 'Carbon Offset',
-    sub: 'CO₂ equivalent avoided vs. gas-powered brush mowers over the last 12 months.',
+    sub: 'Gas-powered brush mowers and chainsaws emit roughly 20 lbs of CO₂ per equipment-hour (EPA non-road gasoline emission factors). Our herds emit none.',
   },
   {
     icon: Volume2,
-    value: '92 dB → 45 dB',
+    value: '~95 dB → ~45 dB',
     label: 'Noise Reduction',
-    sub: 'Typical job-site ambient vs. chainsaw/mower crews — quiet enough for residential neighborhoods and livestock.',
+    sub: 'Brush mowers and chainsaws routinely exceed 95 dB at the operator (OSHA above-threshold for hearing protection). Grazing herds sit near pasture ambient — around 45 dB.',
   },
 ]
 
