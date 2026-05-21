@@ -79,20 +79,6 @@ export default function Contact() {
               ))}
             </ol>
 
-            <div className="border-t border-forest/10 pt-6">
-              <p className="font-sans text-xs font-semibold uppercase tracking-widest text-ochre">
-                Direct line
-              </p>
-              <p className="mt-2 font-sans text-slate">
-                Urgent fire-season scheduling:{' '}
-                <a
-                  href="tel:+15550100000"
-                  className="text-forest font-semibold hover:text-ochre"
-                >
-                  (555) 010-0000
-                </a>
-              </p>
-            </div>
           </aside>
         </div>
       </section>
