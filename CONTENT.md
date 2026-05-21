@@ -105,7 +105,7 @@ Your version body:
 Type here… We secure the perimeter without degrading the ecosystem. By eliminating the spark hazards, chemical runoff, and severe soil compaction associated with heavy machinery, our deployments actively rehabilitate the terrain. Our herds leave behind micro-aerated topsoil and nutrient-rich organic deposits, engineering a more resilient native landscape. 
 2.12 Pillar 3 — Ethical Partnership
 Current title: Ethical Partnership
-Current body: Our goats are partners, not tools. Low-stress handling, veterinary care, and daily welfare checks are non-negotiable on every deployment.
+Current body: Our goats are partners, not tools. Low-stress handling and daily welfare checks are non-negotiable on every deployment.
 Your version title:
 Type here… Systematic Animal Welfare 
 Your version body:
@@ -252,7 +252,7 @@ Your body:
 Type here… We approach defensible space not as a landscaping task, but as a critical engineering challenge. Every deployment is strictly driven by data, beginning with comprehensive parcel-level fuel modeling, topographical slope analysis, and a rigidly defined scope of work. In the face of unpredictable fire behavior, we leave zero room for improvisation or shortcuts. 
 4.3 Dual mission — "Ethical herd care" panel
 Current title: Ethical herd care.
-Current body: The goats are partners, not equipment. They graze the plants they choose to graze, rest when they need to rest, and return to pasture after every job. A licensed veterinarian oversees their welfare year-round.
+Current body: The goats are partners, not equipment. They graze the plants they choose to graze, rest when they need to rest, and return to pasture after every job.
 Your title:
 Type here… Partners in Mitigation: Our Ethical Commitment 
 Your body:
@@ -473,7 +473,7 @@ Type here…
 Your A:
 Type here…
 Q5 — current: What happens if a goat gets sick or injured on-site?
-Current A: Every deployment includes a herder on-site 24/7 and an on-call veterinarian. Incidents are rare, but the protocol is established and transparent.
+Current A: Every deployment includes a herder on-site 24/7. Incidents are rare, but the protocol is established and transparent.
 Your Q:
 Type here…
 Your A:

@@ -84,7 +84,7 @@ const faq = [
   },
   {
     q: 'What happens if a goat gets sick or injured on-site?',
-    a: 'Every deployment includes a herder on-site 24/7 and an on-call veterinarian. Incidents are rare, but the protocol is established and transparent.',
+    a: 'Every deployment includes a herder on-site 24/7. Incidents are rare, but the protocol is established and transparent.',
   },
 ]
 
