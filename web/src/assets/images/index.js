@@ -48,7 +48,6 @@ export const archeryRange = findImage('archery-range')
 
 // Team headshots — About page
 export const teamJim = findImage('team-jim')
-export const teamEthan = findImage('team-ethan')
 export const teamRyan = findImage('team-ryan')
 export const teamLuke = findImage('team-luke')
 
@@ -89,15 +88,6 @@ export const assetSlots = [
     filenames: ['team-jim.jpg'],
     recommended: '≥ 600×600, square crop. Shoulders-up, neutral background.',
     image: teamJim,
-  },
-  {
-    key: 'team-ethan',
-    label: 'Headshot — Ethan Wenter',
-    page: 'About — Team card',
-    accepts: ['image'],
-    filenames: ['team-ethan.jpg'],
-    recommended: '≥ 600×600, square crop.',
-    image: teamEthan,
   },
   {
     key: 'team-ryan',

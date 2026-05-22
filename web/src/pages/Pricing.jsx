@@ -82,10 +82,6 @@ const faq = [
     q: 'Do I need existing fencing?',
     a: 'No. We bring portable electric fencing sized to your parcel and move it as paddocks rotate. Your existing fencing is never relied on for herd containment.',
   },
-  {
-    q: 'What happens if a goat gets sick or injured on-site?',
-    a: 'Every deployment includes a herder on-site 24/7 with established response protocols for medical incidents. They are rare, but our response is immediate and transparent.',
-  },
 ]
 
 export default function Pricing() {
@@ -101,7 +97,7 @@ export default function Pricing() {
           <SectionHeader
             eyebrow="Investment"
             title="Transparent pricing, scoped to your land."
-            lede="Grazing isn’t priced like lawn service. Every parcel is different — we quote after a site assessment, not before. The tiers below frame what a typical engagement looks like at each scale."
+            lede="Grazing isn’t priced like a suburban lawn service. Every parcel is different — we quote after a site assessment, not before. The tiers below frame what a typical engagement looks like at each scale."
           />
         </div>
       </section>

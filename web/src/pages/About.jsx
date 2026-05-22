@@ -1,7 +1,7 @@
 import { Flame, Heart, Video } from 'lucide-react'
 import SectionHeader from '../components/SectionHeader'
 import Seo from '../components/Seo'
-import { teamJim, teamEthan, teamRyan, teamLuke } from '../assets/images'
+import { teamJim, teamRyan, teamLuke } from '../assets/images'
 
 const comparison = [
   {
@@ -36,19 +36,14 @@ const comparison = [
   },
 ]
 
+const founder = {
+  name: 'Jim Guggenhime',
+  role: 'Founder & Director of Operations',
+  photo: teamJim,
+  body: `Jim brings a wealth of hands-on wildland management experience to the field, having built his career protecting some of Colorado's most valued landscapes. With deep roots in the Front Range, Jim has spearheaded complex mitigation projects for high-profile institutions, including securing the campus perimeters at the University of Colorado Boulder and the Boulder Researchers Center. His expertise in biological land management has been trusted by civic organizations like Boulder Parks and Recreation and Colorado Highway Services to manage large-scale civic fuel reduction. Beyond his institutional work, Jim is deeply dedicated to safeguarding private Boulder homes — a commitment to community safety that has earned his methods recognition in several regional magazines. He combines this deep, localized expertise with a genuine passion for sustainable land care.`,
+}
+
 const team = [
-  {
-    name: 'Jim Guggenhime',
-    role: 'Founder & Director of Operations',
-    photo: teamJim,
-    body: `Jim brings a wealth of hands-on wildland management experience to the field, having built his career protecting some of Colorado's most valued landscapes. With deep roots in the Front Range, Jim has spearheaded complex mitigation projects for high-profile institutions, including securing the campus perimeters at the University of Colorado Boulder and the Boulder Researchers Center. His expertise in biological land management has been trusted by civic organizations like Boulder Parks and Recreation and Colorado Highway Services to manage large-scale civic fuel reduction. Beyond his institutional work, Jim is deeply dedicated to safeguarding private Boulder homes — a commitment to community safety that has earned his methods recognition in several regional magazines. He combines this deep, localized expertise with a genuine passion for sustainable land care.`,
-  },
-  {
-    name: 'Ethan Wenter',
-    role: 'Animal Whisperer',
-    photo: teamEthan,
-    body: `Serving as our "eagle in the sky," Ethan maintains continuous, round-the-clock overwatch of our deployments. With deep intuition and a watchful eye, he monitors the herd closely day and night to ensure their safety and operational success.`,
-  },
   {
     name: 'Ryan Bartusek',
     role: 'sUAS Data Collector',
@@ -157,7 +152,30 @@ export default function About() {
             eyebrow="The Team"
             title="People who answer the phone."
           />
-          <div className="mt-12 grid md:grid-cols-2 gap-6">
+          <article className="mt-12 bg-cream border border-forest/15 p-8 md:p-10 flex flex-col md:flex-row gap-8">
+            {founder.photo && (
+              <div className="shrink-0 mx-auto md:mx-0 w-32 h-32 md:w-36 md:h-36 rounded-full overflow-hidden bg-forest/5">
+                <img
+                  src={founder.photo}
+                  alt={`Portrait of ${founder.name}`}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            )}
+            <div className="flex-1 min-w-0">
+              <p className="font-sans text-xs font-semibold uppercase tracking-widest text-ochre">
+                {founder.role}
+              </p>
+              <h3 className="mt-2 font-serif text-3xl text-forest">
+                {founder.name}
+              </h3>
+              <p className="mt-4 font-sans text-slate/80 leading-relaxed">
+                {founder.body}
+              </p>
+            </div>
+          </article>
+
+          <div className="mt-6 grid md:grid-cols-2 gap-6">
             {team.map((m) => (
               <article
                 key={m.name}

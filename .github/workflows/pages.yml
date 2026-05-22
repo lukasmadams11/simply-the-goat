@@ -1,9 +1,8 @@
 name: Deploy to GitHub Pages
 
 on:
-  # Auto-deploy on push is disabled while the site is on legal hold.
-  # When ready to republish, re-enable Pages in Settings, then trigger
-  # this workflow manually from the Actions tab (or re-add the push trigger).
+  push:
+    branches: [main]
   workflow_dispatch:
 
 permissions:

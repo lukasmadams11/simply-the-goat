@@ -36,7 +36,7 @@ export default function Home() {
         description="Simply the GOAT — professional wildfire mitigation through targeted goat grazing. Defensible space, ecological restoration, ethical herd care."
       />
       <Hero
-        eyebrow="Wildfire Mitigation"
+        eyebrow="Wildfire Mitigation & Ecosystem Restoration"
         headline={
           <>
             Nature&rsquo;s Solution
@@ -46,7 +46,7 @@ export default function Home() {
         sub="Professional wildfire mitigation through targeted, heartfelt grazing."
       >
         <Button to="/contact">
-          Request a Deployment <ArrowRight size={16} />
+          Request a Consultation <ArrowRight size={16} />
         </Button>
         <Button
           href="https://www.readyforwildfire.org/prepare-for-wildfire/get-ready/defensible-space/"

@@ -9,9 +9,9 @@ const metrics = [
   },
   {
     icon: Volume2,
-    value: '~95 dB → ~45 dB',
-    label: 'Noise Reduction',
-    sub: 'Brush mowers and chainsaws routinely exceed 95 dB at the operator (OSHA above-threshold for hearing protection). Grazing herds sit near pasture ambient — around 45 dB.',
+    value: '45 dB (down from 92 dB)',
+    label: 'Acoustic Profile',
+    sub: 'We replace the hazardous 92+ dB output of heavy chainsaws and mowers with a conversational 45 dB ambient baseline. Whisper-quiet mitigation that ensures zero disruption to dense residential zones, local wildlife, and community well-being.',
   },
 ]
 

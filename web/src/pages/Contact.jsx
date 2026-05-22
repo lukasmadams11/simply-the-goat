@@ -1,4 +1,4 @@
-import { ClipboardCheck, Truck, FileText } from 'lucide-react'
+import { ClipboardCheck, Truck, FileText, Phone, Mail } from 'lucide-react'
 import SectionHeader from '../components/SectionHeader'
 import ContactForm from '../components/ContactForm'
 import Seo from '../components/Seo'
@@ -18,6 +18,30 @@ const steps = [
     icon: FileText,
     title: 'Report',
     body: 'After the graze we send a post-deployment report with fuel-load reduction figures and insurance-ready documentation.',
+  },
+]
+
+const contacts = [
+  {
+    name: 'Jim Guggenhime',
+    role: 'Founder & Director of Operations',
+    phone: '(720) 938-1000',
+    phoneHref: '+17209381000',
+    email: 'jim@simplythegoat.com',
+  },
+  {
+    name: 'Luke Adams',
+    role: 'sUAS Data Collector & Biological Operations Lead',
+    phone: '(720) 552-3128',
+    phoneHref: '+17205523128',
+    email: 'luke@simplythegoat.com',
+  },
+  {
+    name: 'Ryan Bartusek',
+    role: 'sUAS Data Collector',
+    phone: '(720) 468-8815',
+    phoneHref: '+17204688815',
+    email: 'ryan@simplythegoat.com',
   },
 ]
 
@@ -79,6 +103,35 @@ export default function Contact() {
               ))}
             </ol>
 
+            <div className="border-t border-forest/10 pt-8 space-y-6">
+              <p className="font-sans text-xs font-semibold uppercase tracking-widest text-ochre">
+                Direct contact
+              </p>
+              {contacts.map(({ name, role, phone, phoneHref, email }) => (
+                <div key={name} className="space-y-1">
+                  <p className="font-serif text-lg text-forest">{name}</p>
+                  <p className="font-sans text-xs text-slate/70">{role}</p>
+                  <p className="font-sans text-sm text-slate flex items-center gap-2 mt-2">
+                    <Phone size={14} className="text-ochre" aria-hidden="true" />
+                    <a
+                      href={`tel:${phoneHref}`}
+                      className="text-forest font-semibold hover:text-ochre"
+                    >
+                      {phone}
+                    </a>
+                  </p>
+                  <p className="font-sans text-sm text-slate flex items-center gap-2">
+                    <Mail size={14} className="text-ochre" aria-hidden="true" />
+                    <a
+                      href={`mailto:${email}`}
+                      className="text-forest font-semibold hover:text-ochre"
+                    >
+                      {email}
+                    </a>
+                  </p>
+                </div>
+              ))}
+            </div>
           </aside>
         </div>
       </section>
