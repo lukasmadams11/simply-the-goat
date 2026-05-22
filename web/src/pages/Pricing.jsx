@@ -10,7 +10,7 @@ const tiers = [
     name: 'Residential Perimeter',
     scope:
       'Defensible-space clearing around single-family homes, outbuildings, and driveways.',
-    typical: '0.5 – 3 acres',
+    typical: '3 – 10 acres',
     features: [
       'Pre-graze fuel assessment',
       'Portable fencing and daily water delivery',
@@ -22,7 +22,7 @@ const tiers = [
     name: 'Acreage Management',
     scope:
       'Large parcels, ranches, orchards, and vineyards where terrain or scale makes mechanical crews impractical.',
-    typical: '5 – 80 acres',
+    typical: '10 – 100 acres',
     features: [
       'Multi-paddock rotation plan',
       'GIS mapping of treated zones',
@@ -84,7 +84,7 @@ const faq = [
   },
   {
     q: 'What happens if a goat gets sick or injured on-site?',
-    a: 'Every deployment includes a herder on-site 24/7 and an on-call veterinarian. Incidents are rare, but the protocol is established and transparent.',
+    a: 'Every deployment includes a herder on-site 24/7 with established response protocols for medical incidents. They are rare, but our response is immediate and transparent.',
   },
 ]
 
@@ -117,9 +117,9 @@ export default function Pricing() {
       <section className="bg-forest text-cream">
         <div className="max-w-6xl mx-auto px-6 py-20 md:py-24">
           <SectionHeader
-            eyebrow="Cost Factors"
-            title="What shapes a quote."
-            lede="Three variables do most of the work. We’ll walk you through each during the site assessment."
+            eyebrow="Deployment Variables"
+            title="The calculus of your mitigation scope."
+            lede="Three primary operational metrics dictate the final cost of your project. We define and map each variable alongside you during our initial geospatial site assessment to guarantee total pricing transparency."
             tone="forest"
           />
           <div className="mt-12 grid md:grid-cols-3 gap-10 bg-cream text-slate p-10 md:p-12">

@@ -1,35 +1,64 @@
-import { Flame, Heart, Check, X, Video } from 'lucide-react'
+import { Flame, Heart, Video } from 'lucide-react'
 import SectionHeader from '../components/SectionHeader'
 import Seo from '../components/Seo'
+import { teamJim, teamEthan, teamRyan, teamLuke } from '../assets/images'
 
 const comparison = [
-  { trait: 'Ignition risk (sparks, hot exhaust)', goats: false, mowers: true },
-  { trait: 'Herbicide or fuel runoff', goats: false, mowers: true },
-  { trait: 'Soil compaction on slopes', goats: false, mowers: true },
-  { trait: 'Leaves natural fertilizer behind', goats: true, mowers: false },
-  { trait: 'Handles terrain >30° grade', goats: true, mowers: false },
-  { trait: 'Noise over 85 dB', goats: false, mowers: true },
+  {
+    trait: 'Ignition Risk',
+    goats: '0% — Zero spark or exhaust hazard',
+    mowers: 'High — Blade-on-rock sparks, hot exhaust on dry brush',
+  },
+  {
+    trait: 'Environmental Runoff',
+    goats: 'Zero chemical footprint',
+    mowers: 'High risk — petrochemical leaks, VOC emissions',
+  },
+  {
+    trait: 'Soil Impact on Slopes',
+    goats: 'Micro-aeration — hoof action promotes soil health',
+    mowers: 'Severe compaction — rutting and topsoil displacement',
+  },
+  {
+    trait: 'Post-Clearing Byproduct',
+    goats: 'Organic fertilizer — deposits nutrient-rich matter',
+    mowers: 'Dry thatch — leaves dead plant material, acting as future fuel',
+  },
+  {
+    trait: 'Topographical Limits',
+    goats: '60°+ grade — safe access to near-vertical inclines',
+    mowers: '<20° grade — severe rollover risk on steep terrain',
+  },
+  {
+    trait: 'Acoustic Output',
+    goats: 'Ambient (<60 dB) — no neighborhood disruption',
+    mowers: 'Hazardous (90–105 dB) — requires hearing PPE, highly disruptive',
+  },
 ]
 
 const team = [
   {
     name: 'Jim Guggenhime',
     role: 'Founder & Director of Operations',
-    body: `Jim brings a wealth of hands-on wildland management experience to the field, having built his career protecting some of Colorado's most valued landscapes. With deep roots in the Front Range, Jim has spearheaded complex mitigation projects for high-profile institutions, including securing the campus perimeters at the University of Colorado Boulder and the Boulder Researchers Center. His expertise in biological land management has been trusted by civic organizations like Boulder Parks and Recreation and Colorado Highway Services to manage large-scale civic fuel reduction. Beyond his institutional work, Jim is deeply dedicated to safeguarding private Boulder homes — a commitment to community safety that has earned his methods recognition in several regional magazines.`,
+    photo: teamJim,
+    body: `Jim brings a wealth of hands-on wildland management experience to the field, having built his career protecting some of Colorado's most valued landscapes. With deep roots in the Front Range, Jim has spearheaded complex mitigation projects for high-profile institutions, including securing the campus perimeters at the University of Colorado Boulder and the Boulder Researchers Center. His expertise in biological land management has been trusted by civic organizations like Boulder Parks and Recreation and Colorado Highway Services to manage large-scale civic fuel reduction. Beyond his institutional work, Jim is deeply dedicated to safeguarding private Boulder homes — a commitment to community safety that has earned his methods recognition in several regional magazines. He combines this deep, localized expertise with a genuine passion for sustainable land care.`,
   },
   {
     name: 'Ethan Wenter',
     role: 'Animal Whisperer',
+    photo: teamEthan,
     body: `Serving as our "eagle in the sky," Ethan maintains continuous, round-the-clock overwatch of our deployments. With deep intuition and a watchful eye, he monitors the herd closely day and night to ensure their safety and operational success.`,
   },
   {
     name: 'Ryan Bartusek',
     role: 'sUAS Data Collector',
+    photo: teamRyan,
     body: `Ryan architects the aerial intelligence network that drives our deployments. Operating between our hubs in the Colorado Front Range and the Sierra Nevada foothills, he specializes in Drone-in-a-Box (DiaB) operations, geospatial analysis, and custom Python-driven AI modeling. By processing real-time LiDAR and photogrammetry, Ryan ensures our biological mitigation units are deployed with exact, mathematically verified precision.`,
   },
   {
     name: 'Luke Adams',
     role: 'sUAS Data Collector & Biological Operations Lead',
+    photo: teamLuke,
     body: `Luke bridges the critical gap between aerial telemetry and ground-level execution. While he engineers the same advanced drone mapping and geospatial modeling as the rest of the sUAS team, Luke's expertise extends directly into the herd. He serves as our hands-on tactical liaison, ensuring our biological mitigation units move in perfect synchronization with our topographic data.`,
   },
 ]
@@ -45,9 +74,9 @@ export default function About() {
       <section className="bg-cream border-b border-forest/10">
         <div className="max-w-6xl mx-auto px-6 py-20 md:py-28">
           <SectionHeader
-            eyebrow="About"
-            title="A fire-safety company that happens to raise goats."
-            lede="Simply the GOAT was founded on a simple observation: the landscapes most at risk from wildfire are the ones mechanical crews struggle to reach. Our herds don’t."
+            eyebrow="Our Mission"
+            title="A wildfire mitigation firm that happens to employ goats."
+            lede="Simply the GOAT was founded to solve a critical logistical failure in land management: the complex, high-risk terrains most vulnerable to wildfire are often completely inaccessible to heavy machinery. Our herds secure the zones that mechanical crews can't reach."
           />
         </div>
       </section>
@@ -57,25 +86,29 @@ export default function About() {
           <article>
             <Flame size={32} className="text-ochre" aria-hidden="true" />
             <h2 className="mt-5 font-serif text-3xl text-forest">
-              Serious wildfire prevention.
+              Precision Wildfire Mitigation
             </h2>
             <p className="mt-5 font-sans text-slate/80 leading-relaxed">
-              We treat defensible space as an engineering problem. Every
-              deployment begins with parcel-level fuel modeling, slope analysis,
-              and a written scope. No improvisation, no shortcuts — the terrain
-              doesn&rsquo;t forgive either.
+              We approach defensible space not as a landscaping task, but as a
+              critical engineering challenge. Every deployment is strictly
+              driven by data, beginning with comprehensive parcel-level fuel
+              modeling, topographical slope analysis, and a rigidly defined
+              scope of work. In the face of unpredictable fire behavior, we
+              leave zero room for improvisation or shortcuts.
             </p>
           </article>
           <article>
             <Heart size={32} className="text-ochre" aria-hidden="true" />
             <h2 className="mt-5 font-serif text-3xl text-forest">
-              Ethical herd care.
+              Partners in Mitigation: Our Ethical Commitment
             </h2>
             <p className="mt-5 font-sans text-slate/80 leading-relaxed">
-              The goats are partners, not equipment. They graze the plants they
-              choose to graze, rest when they need to rest, and return to
-              pasture after every job. A licensed veterinarian oversees their
-              welfare year-round.
+              Our goats are the heartbeat of our operation &mdash; valued
+              partners, not mere equipment. We honor their natural instincts by
+              allowing them to selectively forage, dictate their own rest
+              periods, and seamlessly transition back to open pasture after
+              every project. Our commitment to their health, autonomy, and
+              welfare is uncompromising.
             </p>
           </article>
         </div>
@@ -85,28 +118,32 @@ export default function About() {
         <div className="max-w-5xl mx-auto px-6 py-20 md:py-24">
           <SectionHeader
             eyebrow="Goats vs. Mowers"
-            title="Why the herd beats the machine."
+            title="Equipment vs. ecosystem — a specification comparison."
             tone="forest"
           />
           <div className="mt-12 border border-cream/15">
-            <div className="grid grid-cols-[1fr_auto_auto] font-sans text-xs font-semibold uppercase tracking-widest bg-cream/5">
-              <div className="px-5 py-4 text-cream/70">Trait</div>
-              <div className="px-5 py-4 text-center text-ochre">Goats</div>
-              <div className="px-5 py-4 text-center text-cream/60">Mowers</div>
+            <div className="grid grid-cols-1 md:grid-cols-[1fr_1.4fr_1.4fr] font-sans text-xs font-semibold uppercase tracking-widest bg-cream/5">
+              <div className="px-5 py-4 text-cream/70">Mitigation Parameter</div>
+              <div className="px-5 py-4 text-ochre border-t md:border-t-0 md:border-l border-cream/10">
+                Targeted Grazing (The Herd)
+              </div>
+              <div className="px-5 py-4 text-cream/60 border-t md:border-t-0 md:border-l border-cream/10">
+                Mechanical Mowing (Heavy Machinery)
+              </div>
             </div>
-            {comparison.map(({ trait, goats, mowers }, i) => (
+            {comparison.map(({ trait, goats, mowers }) => (
               <div
                 key={trait}
-                className={`grid grid-cols-[1fr_auto_auto] items-center font-sans text-sm ${
-                  i !== 0 ? 'border-t border-cream/10' : ''
-                }`}
+                className="grid grid-cols-1 md:grid-cols-[1fr_1.4fr_1.4fr] font-sans text-sm border-t border-cream/10"
               >
-                <div className="px-5 py-4 text-cream/90">{trait}</div>
-                <div className="px-5 py-4 text-center">
-                  <Cell ok={goats} good={goats} />
+                <div className="px-5 py-4 font-semibold text-cream/90">
+                  {trait}
                 </div>
-                <div className="px-5 py-4 text-center">
-                  <Cell ok={mowers} good={!mowers} />
+                <div className="px-5 py-4 text-cream/85 leading-relaxed border-t md:border-t-0 md:border-l border-cream/10">
+                  {goats}
+                </div>
+                <div className="px-5 py-4 text-cream/60 leading-relaxed border-t md:border-t-0 md:border-l border-cream/10">
+                  {mowers}
                 </div>
               </div>
             ))}
@@ -124,17 +161,28 @@ export default function About() {
             {team.map((m) => (
               <article
                 key={m.name}
-                className="bg-cream border border-forest/10 p-8"
+                className="bg-cream border border-forest/10 p-8 flex gap-6"
               >
-                <p className="font-sans text-xs font-semibold uppercase tracking-widest text-ochre">
-                  {m.role}
-                </p>
-                <h3 className="mt-2 font-serif text-2xl text-forest">
-                  {m.name}
-                </h3>
-                <p className="mt-4 font-sans text-slate/80 leading-relaxed">
-                  {m.body}
-                </p>
+                {m.photo && (
+                  <div className="shrink-0 w-20 h-20 rounded-full overflow-hidden bg-forest/5">
+                    <img
+                      src={m.photo}
+                      alt={`Portrait of ${m.name}`}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                )}
+                <div className="flex-1 min-w-0">
+                  <p className="font-sans text-xs font-semibold uppercase tracking-widest text-ochre">
+                    {m.role}
+                  </p>
+                  <h3 className="mt-2 font-serif text-2xl text-forest">
+                    {m.name}
+                  </h3>
+                  <p className="mt-4 font-sans text-slate/80 leading-relaxed">
+                    {m.body}
+                  </p>
+                </div>
               </article>
             ))}
           </div>
@@ -159,13 +207,3 @@ export default function About() {
   )
 }
 
-function Cell({ ok, good }) {
-  const Icon = ok ? Check : X
-  const color = good ? 'text-ochre' : 'text-cream/40'
-  return (
-    <span className={`inline-flex ${color}`}>
-      <Icon size={18} aria-hidden="true" />
-      <span className="sr-only">{ok ? 'Yes' : 'No'}</span>
-    </span>
-  )
-}

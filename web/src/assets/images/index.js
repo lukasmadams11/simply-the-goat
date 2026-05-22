@@ -1,7 +1,7 @@
 // Auto-detects image and video files dropped into this folder.
-// Drop a file named e.g. "hero.jpg" or "hero.mp4" and it gets picked up
+// Drop a file named e.g. "hero.jpg" or "team-jim.jpg" and it gets picked up
 // automatically — no code edits needed. If a slot's file isn't here, the
-// site falls back to the generated SVG placeholder.
+// site falls back to a placeholder or hides the photo gracefully.
 
 const imageModules = import.meta.glob(
   './*.{jpg,jpeg,png,webp,avif,JPG,JPEG,PNG,WEBP,AVIF}',
@@ -43,14 +43,14 @@ function findVideo(basename) {
 // Home hero background still photo (used as poster if a hero video is present)
 export const hero = findImage('hero')
 
-// Featured before/after slider on the Results page (each ~16:9)
-export const before = findImage('before')
-export const after = findImage('after')
+// Madera Archery Range — Results page "Recent Project" card
+export const archeryRange = findImage('archery-range')
 
-// Three goat portraits on the About page (1:1 square recommended)
-export const goat1 = findImage('goat-1')
-export const goat2 = findImage('goat-2')
-export const goat3 = findImage('goat-3')
+// Team headshots — About page
+export const teamJim = findImage('team-jim')
+export const teamEthan = findImage('team-ethan')
+export const teamRyan = findImage('team-ryan')
+export const teamLuke = findImage('team-luke')
 
 // ---- Video slots ---------------------------------------------------------
 // Home hero background video (overrides hero image when present)
@@ -73,49 +73,49 @@ export const assetSlots = [
     video: heroVideo,
   },
   {
-    key: 'before',
-    label: 'Before/after — "before" frame',
-    page: 'Results — comparison slider',
+    key: 'archery-range',
+    label: 'Madera Archery Range photo',
+    page: 'Results — Recent Project card',
     accepts: ['image'],
-    filenames: ['before.jpg'],
-    recommended: '≥ 1600×900 (16:9). Same framing as after.',
-    image: before,
+    filenames: ['archery-range.jpg'],
+    recommended: '≥ 1200×800, landscape (3:2 or 16:9). Before/after, wide shot of the cleared zone, or the herd at work — anything that shows the project.',
+    image: archeryRange,
   },
   {
-    key: 'after',
-    label: 'Before/after — "after" frame',
-    page: 'Results — comparison slider',
+    key: 'team-jim',
+    label: 'Headshot — Jim Guggenhime',
+    page: 'About — Team card',
     accepts: ['image'],
-    filenames: ['after.jpg'],
-    recommended: '≥ 1600×900 (16:9). Same framing as before.',
-    image: after,
+    filenames: ['team-jim.jpg'],
+    recommended: '≥ 600×600, square crop. Shoulders-up, neutral background.',
+    image: teamJim,
   },
   {
-    key: 'goat-1',
-    label: 'Goat portrait — Juniper',
-    page: 'About — herd grid',
+    key: 'team-ethan',
+    label: 'Headshot — Ethan Wenter',
+    page: 'About — Team card',
     accepts: ['image'],
-    filenames: ['goat-1.jpg'],
-    recommended: '≥ 800×800, square crop.',
-    image: goat1,
+    filenames: ['team-ethan.jpg'],
+    recommended: '≥ 600×600, square crop.',
+    image: teamEthan,
   },
   {
-    key: 'goat-2',
-    label: 'Goat portrait — Atlas',
-    page: 'About — herd grid',
+    key: 'team-ryan',
+    label: 'Headshot — Ryan Bartusek',
+    page: 'About — Team card',
     accepts: ['image'],
-    filenames: ['goat-2.jpg'],
-    recommended: '≥ 800×800, square crop.',
-    image: goat2,
+    filenames: ['team-ryan.jpg'],
+    recommended: '≥ 600×600, square crop.',
+    image: teamRyan,
   },
   {
-    key: 'goat-3',
-    label: 'Goat portrait — Sable',
-    page: 'About — herd grid',
+    key: 'team-luke',
+    label: 'Headshot — Luke Adams',
+    page: 'About — Team card',
     accepts: ['image'],
-    filenames: ['goat-3.jpg'],
-    recommended: '≥ 800×800, square crop.',
-    image: goat3,
+    filenames: ['team-luke.jpg'],
+    recommended: '≥ 600×600, square crop.',
+    image: teamLuke,
   },
   {
     key: 'goat-cam',

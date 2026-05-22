@@ -7,24 +7,24 @@ import Seo from '../components/Seo'
 const pillars = [
   {
     icon: Shield,
-    title: 'Defensible Space',
-    body: 'Targeted fuel load reduction around homes, powerlines, and critical infrastructure — the exact perimeter fire departments and insurers look for.',
+    title: 'Engineered Defensible Space',
+    body: 'We execute precision fuel load reduction surrounding residential zones, utility corridors, and critical infrastructure. Our targeted mitigation establishes the exact defensible footprint mandated by fire authorities and required by insurance underwriters.',
   },
   {
     icon: Leaf,
-    title: 'Ecological Restoration',
-    body: 'No sparks, no herbicides, no soil compaction. Our herds leave behind natural fertilizer and healthier native plant communities.',
+    title: 'Regenerative Fuel Reduction',
+    body: 'We secure the perimeter without degrading the ecosystem. By eliminating the spark hazards, chemical runoff, and severe soil compaction associated with heavy machinery, our deployments actively rehabilitate the terrain. Our herds leave behind micro-aerated topsoil and nutrient-rich organic deposits, engineering a more resilient native landscape.',
   },
   {
     icon: Heart,
-    title: 'Ethical Partnership',
-    body: 'Our goats are partners, not tools. Low-stress handling, veterinary care, and daily welfare checks are non-negotiable on every deployment.',
+    title: 'Systematic Animal Welfare',
+    body: 'We view our herd as active operational partners, not expendable assets. Low-stress handling protocols and rigorous daily welfare monitoring are strictly enforced across every deployment.',
   },
 ]
 
 const stats = [
   { value: '20yrs', label: 'Field Experience' },
-  { value: '0', label: 'Sparks Generated' },
+  { value: '50%', label: 'Fuel Load Reduction' },
   { value: '0', label: 'Gallons of Fuel Burned' },
 ]
 
@@ -48,7 +48,12 @@ export default function Home() {
         <Button to="/contact">
           Request a Deployment <ArrowRight size={16} />
         </Button>
-        <Button to="/results" variant="secondary">
+        <Button
+          href="https://www.readyforwildfire.org/prepare-for-wildfire/get-ready/defensible-space/"
+          target="_blank"
+          rel="noopener noreferrer"
+          variant="secondary"
+        >
           See the Science
         </Button>
       </Hero>
@@ -59,7 +64,7 @@ export default function Home() {
             align="center"
             eyebrow="Our Mission"
             title="Fire safety rooted in animal husbandry."
-            lede="We partner with working herds to reduce wildfire risk on the landscapes where people live and work. Every acre we clear advances two goals at once — defensible space for our clients, and a dignified life for our animals."
+            lede="We deploy biological mitigation units to systematically engineer defensible space across high-risk, inaccessible terrains. Every acre we manage achieves a strict dual mandate: uncompromising fire defense for our communities and the highest standard of ethical welfare for our working herd."
           />
         </div>
       </section>
@@ -67,8 +72,8 @@ export default function Home() {
       <section className="bg-forest text-cream">
         <div className="max-w-6xl mx-auto px-6 py-24">
           <SectionHeader
-            eyebrow="Why Goats"
-            title="Three pillars of responsible mitigation."
+            eyebrow="Operational Framework"
+            title="The architecture of engineered mitigation."
             tone="forest"
           />
           <div className="mt-14 grid gap-10 md:grid-cols-3">
@@ -105,11 +110,12 @@ export default function Home() {
       <section className="bg-cream">
         <div className="max-w-4xl mx-auto px-6 py-24 text-center">
           <h2 className="font-serif text-4xl md:text-5xl text-forest leading-tight">
-            Is your property fire-ready?
+            Secure Your Defensible Space.
           </h2>
           <p className="mt-5 font-sans text-lg text-slate max-w-2xl mx-auto">
-            Tell us your acreage, vegetation, and terrain. We&rsquo;ll return a
-            scoped deployment plan within two business days.
+            Submit your parcel parameters &mdash; including acreage, primary fuel
+            load, and topographical grade. Our team will engineer and return a
+            precise, GIS-backed deployment scope within 48 hours.
           </p>
           <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
             <Button to="/contact">

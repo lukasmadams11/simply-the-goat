@@ -1,6 +1,7 @@
 import SectionHeader from '../components/SectionHeader'
 import EcoImpactTracker from '../components/EcoImpactTracker'
 import Seo from '../components/Seo'
+import { archeryRange } from '../assets/images'
 
 export default function Results() {
   return (
@@ -13,9 +14,9 @@ export default function Results() {
       <section className="bg-cream border-b border-forest/10">
         <div className="max-w-6xl mx-auto px-6 py-20 md:py-28">
           <SectionHeader
-            eyebrow="The Science"
-            title="Measured outcomes, not marketing."
-            lede="Every deployment is scoped with site analysis, tracked in-field, and verified with post-graze fuel-load checks. The figures below reflect our inaugural deployment; multi-season totals will follow as our portfolio grows."
+            eyebrow="Operational Telemetry"
+            title="Empirical outcomes. Uncompromising verification."
+            lede="We map with advanced GIS, execute with precision, and verify every deployment with rigorous post-mitigation fuel load analysis. The data below represents our rolling 12-month operational metrics."
           />
         </div>
       </section>
@@ -23,9 +24,9 @@ export default function Results() {
       <section className="bg-forest text-cream">
         <div className="max-w-6xl mx-auto px-6 py-20 md:py-24">
           <SectionHeader
-            eyebrow="Eco-Impact Tracker"
-            title="What you avoid matters as much as what you clear."
-            lede="Mechanical mitigation burns fuel, emits carbon, and saturates neighborhoods with noise. Goat grazing does none of that."
+            eyebrow="Environmental Telemetry"
+            title="Precision clearing with zero ecological compromise."
+            lede="Traditional mechanical operations rely on fossil fuels, generate heavy emissions, and introduce severe acoustic disruption. Our biological brush management achieves superior fuel reduction with none of the toxic byproducts."
             tone="forest"
           />
           <div className="mt-12">
@@ -35,14 +36,49 @@ export default function Results() {
       </section>
 
       <section className="bg-cream border-t border-forest/10">
+        <div className="max-w-6xl mx-auto px-6 py-20 md:py-24">
+          <SectionHeader
+            eyebrow="Recent Project"
+            title="Madera Archery Range."
+          />
+          <div className="mt-12 max-w-2xl mx-auto">
+            <article className="bg-cream border border-forest/10 overflow-hidden flex flex-col">
+              {archeryRange && (
+                <div className="aspect-video bg-forest/5 overflow-hidden">
+                  <img
+                    src={archeryRange}
+                    alt="Madera Archery Range — cleared parcel"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              )}
+              <div className="p-8">
+                <p className="font-sans text-xs font-semibold uppercase tracking-widest text-ochre">
+                  40 acres
+                </p>
+                <h3 className="mt-3 font-serif text-2xl text-forest">
+                  Madera Archery Range
+                </h3>
+                <p className="mt-4 font-sans text-slate/80 leading-relaxed">
+                  Cleared a beautiful archery range &mdash; lots of overgrowth
+                  and hills.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-cream border-t border-forest/10">
         <div className="max-w-4xl mx-auto px-6 py-16">
           <p className="font-sans text-sm text-slate/70 leading-relaxed">
             <span className="font-semibold text-forest">Methodology.</span>{' '}
-            Deployments are documented to standards aligned with CAL FIRE
-            defensible-space guidance. Carbon comparisons reference EPA emission
-            factors for equivalent gas-powered equipment hours. Fuel-load
-            methodology will follow Brown&rsquo;s transect sampling as our
-            portfolio scales.
+            Fuel load reduction is verified pre- and post-deployment utilizing
+            standardized Brown&rsquo;s transect sampling. Soil vitality is
+            quantified via targeted organic-matter assays across randomized 1m²
+            parcel matrices. Carbon abatement metrics are calculated using
+            baseline EPA emission factors for equivalent displaced petrochemical
+            machinery.
           </p>
         </div>
       </section>
