@@ -114,8 +114,10 @@ export default function Home() {
           </h2>
           <p className="mt-5 font-sans text-lg text-slate max-w-2xl mx-auto">
             Submit your parcel parameters &mdash; including acreage, primary fuel
-            load, and topographical grade. Our team will engineer and return a
-            precise, GIS-backed deployment scope within 48 hours.
+            load, and topographical grade. Our team will engineer a precise,
+            GIS-backed deployment scope tailored to your property. Response
+            times vary with active field deployments &mdash; we follow up as
+            soon as our crews are off the hillside.
           </p>
           <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
             <Button to="/contact">
