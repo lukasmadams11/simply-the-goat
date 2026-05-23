@@ -105,9 +105,19 @@ export default function Footer() {
       </div>
 
       <div className="border-t border-cream/10">
-        <p className="max-w-6xl mx-auto px-6 py-5 font-sans text-xs text-cream/60">
-          &copy; {new Date().getFullYear()} Simply the GOAT
-        </p>
+        <div className="max-w-6xl mx-auto px-6 py-5 space-y-2">
+          <p className="font-sans text-[11px] leading-relaxed text-cream/55">
+            All content on this website is provided for general informational
+            purposes only and does not constitute a binding offer, contract,
+            warranty, or professional advice. Service descriptions, quotes, and
+            timelines shown are illustrative and subject to change without
+            notice. A signed written agreement is required to establish any
+            service engagement with Simply the GOAT.
+          </p>
+          <p className="font-sans text-xs text-cream/60">
+            &copy; {new Date().getFullYear()} Simply the GOAT
+          </p>
+        </div>
       </div>
     </footer>
   )
