@@ -25,22 +25,22 @@ const contacts = [
   {
     name: 'Jim Guggenhime',
     role: 'Founder & Director of Operations',
-    phone: '(720) 938-1000',
-    phoneHref: '+17209381000',
+    phone: '(559) 580-3559',
+    phoneHref: '+15595803559',
     email: 'jim@simplythegoat.com',
   },
   {
     name: 'Luke Adams',
     role: 'sUAS Data Collector & Biological Operations Lead',
-    phone: '(720) 552-3128',
-    phoneHref: '+17205523128',
+    phone: '(559) 580-3412',
+    phoneHref: '+15595803412',
     email: 'luke@simplythegoat.com',
   },
   {
     name: 'Ryan Bartusek',
     role: 'sUAS Data Collector',
-    phone: '(720) 468-8815',
-    phoneHref: '+17204688815',
+    phone: '(559) 580-3538',
+    phoneHref: '+15595803538',
     email: 'ryan@simplythegoat.com',
   },
 ]

@@ -50,8 +50,8 @@ export default function Footer() {
             <p className="font-semibold text-cream/95">Jim Guggenhime</p>
             <p className="flex items-start gap-2 text-cream/80">
               <Phone size={14} className="mt-0.5 shrink-0" aria-hidden="true" />
-              <a href="tel:+17209381000" className="hover:text-ochre transition-colors">
-                (720) 938-1000
+              <a href="tel:+15595803559" className="hover:text-ochre transition-colors">
+                (559) 580-3559
               </a>
             </p>
             <p className="flex items-start gap-2 text-cream/80">
@@ -65,8 +65,8 @@ export default function Footer() {
             <p className="font-semibold text-cream/95">Luke Adams</p>
             <p className="flex items-start gap-2 text-cream/80">
               <Phone size={14} className="mt-0.5 shrink-0" aria-hidden="true" />
-              <a href="tel:+17205523128" className="hover:text-ochre transition-colors">
-                (720) 552-3128
+              <a href="tel:+15595803412" className="hover:text-ochre transition-colors">
+                (559) 580-3412
               </a>
             </p>
             <p className="flex items-start gap-2 text-cream/80">
@@ -80,8 +80,8 @@ export default function Footer() {
             <p className="font-semibold text-cream/95">Ryan Bartusek</p>
             <p className="flex items-start gap-2 text-cream/80">
               <Phone size={14} className="mt-0.5 shrink-0" aria-hidden="true" />
-              <a href="tel:+17204688815" className="hover:text-ochre transition-colors">
-                (720) 468-8815
+              <a href="tel:+15595803538" className="hover:text-ochre transition-colors">
+                (559) 580-3538
               </a>
             </p>
             <p className="flex items-start gap-2 text-cream/80">
