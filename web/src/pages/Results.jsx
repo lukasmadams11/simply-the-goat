@@ -60,8 +60,20 @@ export default function Results() {
                   Madera Archery Range
                 </h3>
                 <p className="mt-4 font-sans text-slate/80 leading-relaxed">
-                  Cleared a beautiful archery range &mdash; lots of overgrowth
-                  and hills.
+                  When we rolled up to the Madera Archery Range to tackle 40
+                  acres of steep, rocky hills, we knew right away that heavy
+                  machinery wasn&rsquo;t going to cut it. The property was just
+                  walled in by thick brush, with patches of poison oak waiting
+                  down in the riverbeds. Where a tractor would have easily
+                  rolled over, our herd took one look at those crazy slopes
+                  and saw an all-you-can-eat buffet. They spent the job
+                  scrambling up the hillsides, standing on their hind legs to
+                  munch down the fire fuels and completely open up the
+                  overgrown shooting lanes. It was incredible watching them
+                  turn a serious wildfire hazard into a clean, safe range
+                  without tearing up a single inch of topsoil. Sometimes the
+                  best way to handle wild country is to let Simply the GOAT do
+                  what they do best.
                 </p>
               </div>
             </article>
