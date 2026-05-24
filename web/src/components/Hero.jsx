@@ -1,37 +1,6 @@
-import HillsideSVG from './HillsideSVG'
-import { hero as heroPhoto, heroVideo } from '../assets/images'
-
 export default function Hero({ eyebrow, headline, sub, children }) {
   return (
-    <section className="relative overflow-hidden">
-      <div className="absolute inset-0 -z-10">
-        {heroVideo ? (
-          <video
-            className="w-full h-full object-cover"
-            autoPlay
-            muted
-            loop
-            playsInline
-            poster={heroPhoto || undefined}
-            aria-hidden="true"
-          >
-            <source src={heroVideo.src} type={`video/${heroVideo.ext === 'mov' ? 'quicktime' : heroVideo.ext}`} />
-          </video>
-        ) : heroPhoto ? (
-          <img
-            src={heroPhoto}
-            alt=""
-            className="w-full h-full object-cover"
-          />
-        ) : (
-          <HillsideSVG className="w-full h-full" />
-        )}
-        <div
-          aria-hidden="true"
-          className="absolute inset-0 bg-gradient-to-br from-cream/65 via-cream/15 to-cream"
-        />
-      </div>
-
+    <section className="relative">
       <div className="max-w-6xl mx-auto px-6 pt-24 pb-32 md:pt-32 md:pb-40">
         <div className="max-w-3xl">
           {eyebrow && (
