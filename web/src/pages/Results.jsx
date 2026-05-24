@@ -2,7 +2,9 @@ import SectionHeader from '../components/SectionHeader'
 import EcoImpactTracker from '../components/EcoImpactTracker'
 import BeforeAfterSlider from '../components/BeforeAfterSlider'
 import Seo from '../components/Seo'
-import { archeryBefore, archeryAfter } from '../assets/images'
+import { archeryBefore, archeryAfter, galleryPairs } from '../assets/images'
+
+const filledGalleryPairs = galleryPairs.filter((p) => p.before && p.after)
 
 export default function Results() {
   return (
@@ -98,6 +100,39 @@ export default function Results() {
           </div>
         </div>
       </section>
+
+      {filledGalleryPairs.length > 0 && (
+        <section className="bg-cream border-t border-forest/10">
+          <div className="max-w-6xl mx-auto px-6 py-20 md:py-24">
+            <SectionHeader
+              eyebrow="Field Gallery"
+              title="Before and after."
+              lede="A sample of recent deployments. Drag the slider on each image to reveal the transformation."
+            />
+            <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
+              {filledGalleryPairs.map((pair) => (
+                <BeforeAfterSlider
+                  key={pair.id}
+                  before={
+                    <img
+                      src={pair.before}
+                      alt="Before clearing"
+                      className="w-full h-full object-cover"
+                    />
+                  }
+                  after={
+                    <img
+                      src={pair.after}
+                      alt="After clearing"
+                      className="w-full h-full object-cover"
+                    />
+                  }
+                />
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       <section className="bg-cream border-t border-forest/10">
         <div className="max-w-4xl mx-auto px-6 py-16">

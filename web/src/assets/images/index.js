@@ -49,6 +49,21 @@ export const hero = findImage('hero')
 export const archeryBefore = findImage('archery-before')
 export const archeryAfter = findImage('archery-after')
 
+// Field Gallery — Results page general before/after gallery. Each pair is a
+// drag-to-reveal slider. Add more pairs by extending the array below.
+export const galleryPairs = [
+  {
+    id: 'gallery-1',
+    before: findImage('gallery-1-before'),
+    after: findImage('gallery-1-after'),
+  },
+  {
+    id: 'gallery-2',
+    before: findImage('gallery-2-before'),
+    after: findImage('gallery-2-after'),
+  },
+]
+
 // ---- Video slots ---------------------------------------------------------
 // Home hero background video (overrides hero image when present)
 export const heroVideo = findVideo('hero')
@@ -84,4 +99,27 @@ export const assetSlots = [
     recommended: '≥ 1200×800, landscape (16:9). Same framing as the before photo so the slider lines up cleanly.',
     image: archeryAfter,
   },
+  ...galleryPairs.flatMap((pair, idx) => {
+    const n = idx + 1
+    return [
+      {
+        key: `${pair.id}-before`,
+        label: `Field Gallery #${n} — BEFORE`,
+        page: 'Results — Field Gallery',
+        accepts: ['image'],
+        filenames: [`${pair.id}-before.jpg`],
+        recommended: '≥ 1200×800, landscape (16:9). Same framing as the after photo so the slider lines up cleanly.',
+        image: pair.before,
+      },
+      {
+        key: `${pair.id}-after`,
+        label: `Field Gallery #${n} — AFTER`,
+        page: 'Results — Field Gallery',
+        accepts: ['image'],
+        filenames: [`${pair.id}-after.jpg`],
+        recommended: '≥ 1200×800, landscape (16:9). Same framing as the before photo so the slider lines up cleanly.',
+        image: pair.after,
+      },
+    ]
+  }),
 ]

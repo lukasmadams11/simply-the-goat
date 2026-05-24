@@ -14,6 +14,10 @@ If a file isn't here, the site falls back to a placeholder or hides the photo gr
 | `hero.jpg` | image | Home hero still — shown as the video poster (slow connections, autoplay-blocked devices) | ≥ 1920×1080, landscape |
 | `archery-before.jpg` | image | Results page — Madera Archery Range, **before** clearing | ≥ 1200×800 landscape (16:9) |
 | `archery-after.jpg` | image | Results page — Madera Archery Range, **after** clearing | ≥ 1200×800 landscape (16:9) |
+| `gallery-1-before.jpg` | image | Results page — Field Gallery pair #1, **before** | ≥ 1200×800 landscape (16:9) |
+| `gallery-1-after.jpg` | image | Results page — Field Gallery pair #1, **after** | ≥ 1200×800 landscape (16:9) |
+| `gallery-2-before.jpg` | image | Results page — Field Gallery pair #2, **before** | ≥ 1200×800 landscape (16:9) |
+| `gallery-2-after.jpg` | image | Results page — Field Gallery pair #2, **after** | ≥ 1200×800 landscape (16:9) |
 
 ## Rules
 
@@ -38,7 +42,17 @@ The Results page renders the archery range as a **drag-to-reveal slider** when B
 - Drop **only one** of the two → the page shows it as a plain single image.
 - Drop **neither** → no image, just the text card.
 
-For the slider to look right, the two photos should be framed as close to identically as possible (same camera position, same lens, same crop) — that way only the vegetation visibly changes when you sweep.
+## The Field Gallery
+
+A separate section on the Results page for general before/after comparisons that aren't tied to the archery story. Each pair (`gallery-N-before.jpg` + `gallery-N-after.jpg`) renders as its own drag-to-reveal slider.
+
+- Drop **both halves of a pair** → that pair appears in the gallery.
+- Drop **only one** → the pair is skipped (it needs both halves to show).
+- Drop **none** → the whole Field Gallery section hides entirely.
+
+Need more than 2 pairs? Just say the word and I'll add `gallery-3`, `gallery-4`, etc.
+
+**Photo-pair tip (both sections):** For the slider to look right, the two photos should be framed as close to identically as possible (same camera position, same lens, same crop) — that way only the vegetation visibly changes when you sweep.
 
 ## Tips
 
