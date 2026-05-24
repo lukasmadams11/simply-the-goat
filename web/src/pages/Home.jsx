@@ -83,7 +83,7 @@ export default function Home() {
             Request a Consultation <ArrowRight size={16} />
           </Button>
           <Button
-            href="https://www.readyforwildfire.org/"
+            href="https://www.facebook.com/reel/814240840109080/?mibextid=ZZyLBr"
             target="_blank"
             rel="noopener noreferrer"
             variant="secondary"
