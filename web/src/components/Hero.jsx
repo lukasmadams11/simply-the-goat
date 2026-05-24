@@ -4,11 +4,11 @@ export default function Hero({ eyebrow, headline, sub, children }) {
       <div className="max-w-6xl mx-auto px-6 pt-24 pb-32 md:pt-32 md:pb-40">
         <div className="max-w-3xl">
           {eyebrow && (
-            <p className="font-sans text-sm font-semibold uppercase tracking-widest text-ochre mb-5 [text-shadow:0_1px_3px_rgba(254,250,224,0.95)]">
+            <p className="font-sans text-sm font-semibold uppercase tracking-widest text-ochre mb-5 [text-shadow:0_1px_3px_rgba(254,250,224,0.95)] [-webkit-text-stroke:0.5px_rgba(0,0,0,0.4)] [paint-order:stroke_fill]">
               {eyebrow}
             </p>
           )}
-          <h1 className="font-serif text-5xl md:text-7xl leading-[1.05] text-forest [text-shadow:0_2px_10px_rgba(254,250,224,0.95),0_0_4px_rgba(254,250,224,0.85)]">
+          <h1 className="font-serif text-5xl md:text-7xl leading-[1.05] text-forest [text-shadow:0_2px_10px_rgba(254,250,224,0.95),0_0_4px_rgba(254,250,224,0.85)] [-webkit-text-stroke:1px_rgba(0,0,0,0.35)] [paint-order:stroke_fill]">
             {headline}
           </h1>
           {sub && (
