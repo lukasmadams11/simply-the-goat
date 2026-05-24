@@ -14,7 +14,7 @@ export default function Hero({ eyebrow, headline, sub, children }) {
             {headline}
           </h1>
           {sub && (
-            <p className="mt-6 font-sans text-lg md:text-2xl font-semibold leading-relaxed text-slate max-w-2xl [text-shadow:0_1px_4px_rgba(254,250,224,0.95)]">
+            <p className="mt-6 font-sans text-lg md:text-2xl font-semibold leading-relaxed text-forest max-w-2xl [text-shadow:0_1px_4px_rgba(254,250,224,0.95)]">
               {sub}
             </p>
           )}
