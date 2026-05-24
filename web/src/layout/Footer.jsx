@@ -26,6 +26,11 @@ export default function Footer() {
     <footer className="bg-forest text-cream mt-24">
       <div className="max-w-6xl mx-auto px-6 py-14 grid gap-10 md:grid-cols-3 md:items-start">
         <div>
+          <img
+            src="/logo.png"
+            alt="Simply the GOAT logo"
+            className="w-24 h-24 object-contain mb-4"
+          />
           <p className="font-serif text-2xl">Simply the GOAT</p>
           <p className="mt-2 font-sans text-sm text-cream/70">
             Defensible space, naturally.
