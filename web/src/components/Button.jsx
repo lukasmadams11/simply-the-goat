@@ -6,7 +6,7 @@ const base =
 const variants = {
   primary: 'bg-forest text-cream hover:bg-forest/90',
   secondary:
-    'border border-ochre text-ochre bg-transparent hover:bg-ochre hover:text-cream',
+    'border-2 border-ochre text-ochre bg-cream/50 backdrop-blur-sm hover:bg-ochre hover:text-cream hover:[text-shadow:none] hover:[-webkit-text-stroke:0_transparent] [text-shadow:0_1px_3px_rgba(254,250,224,0.95)] [-webkit-text-stroke:0.5px_rgba(0,0,0,0.45)] [paint-order:stroke_fill]',
   ghost: 'text-forest hover:text-ochre',
 }
 
