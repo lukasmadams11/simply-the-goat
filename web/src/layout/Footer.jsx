@@ -23,7 +23,7 @@ function InstagramIcon({ size = 18 }) {
 
 export default function Footer() {
   return (
-    <footer className="bg-forest text-cream mt-24">
+    <footer className="relative z-30 bg-forest text-cream mt-24">
       <div className="max-w-6xl mx-auto px-6 py-14 grid gap-10 md:grid-cols-3 md:items-start">
         <div>
           <img
