@@ -83,7 +83,7 @@ export default function Home() {
             Request a Consultation <ArrowRight size={16} />
           </Button>
           <Button
-            href="https://www.readyforwildfire.org/prepare-for-wildfire/get-ready/defensible-space/"
+            href="https://www.readyforwildfire.org/"
             target="_blank"
             rel="noopener noreferrer"
             variant="secondary"
