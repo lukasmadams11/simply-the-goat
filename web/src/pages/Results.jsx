@@ -1,7 +1,8 @@
 import SectionHeader from '../components/SectionHeader'
 import EcoImpactTracker from '../components/EcoImpactTracker'
+import BeforeAfterSlider from '../components/BeforeAfterSlider'
 import Seo from '../components/Seo'
-import { archeryRange } from '../assets/images'
+import { archeryBefore, archeryAfter } from '../assets/images'
 
 export default function Results() {
   return (
@@ -43,15 +44,32 @@ export default function Results() {
           />
           <div className="mt-12 max-w-2xl mx-auto">
             <article className="bg-cream border border-forest/10 overflow-hidden flex flex-col">
-              {archeryRange && (
+              {archeryBefore && archeryAfter ? (
+                <BeforeAfterSlider
+                  before={
+                    <img
+                      src={archeryBefore}
+                      alt="Madera Archery Range — before clearing"
+                      className="w-full h-full object-cover"
+                    />
+                  }
+                  after={
+                    <img
+                      src={archeryAfter}
+                      alt="Madera Archery Range — after clearing"
+                      className="w-full h-full object-cover"
+                    />
+                  }
+                />
+              ) : (archeryBefore || archeryAfter) ? (
                 <div className="aspect-video bg-forest/5 overflow-hidden">
                   <img
-                    src={archeryRange}
+                    src={archeryBefore || archeryAfter}
                     alt="Madera Archery Range — cleared parcel"
                     className="w-full h-full object-cover"
                   />
                 </div>
-              )}
+              ) : null}
               <div className="p-8">
                 <p className="font-sans text-xs font-semibold uppercase tracking-widest text-ochre">
                   40 acres

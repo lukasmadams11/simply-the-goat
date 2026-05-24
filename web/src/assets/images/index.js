@@ -1,6 +1,6 @@
 // Auto-detects image and video files dropped into this folder.
-// Drop a file named e.g. "hero.jpg" or "team-jim.jpg" and it gets picked up
-// automatically — no code edits needed. If a slot's file isn't here, the
+// Drop a file named e.g. "hero.jpg" or "archery-before.jpg" and it gets picked
+// up automatically — no code edits needed. If a slot's file isn't here, the
 // site falls back to a placeholder or hides the photo gracefully.
 
 const imageModules = import.meta.glob(
@@ -43,20 +43,15 @@ function findVideo(basename) {
 // Home hero background still photo (used as poster if a hero video is present)
 export const hero = findImage('hero')
 
-// Madera Archery Range — Results page "Recent Project" card
-export const archeryRange = findImage('archery-range')
-
-// Team headshots — About page
-export const teamJim = findImage('team-jim')
-export const teamRyan = findImage('team-ryan')
-export const teamLuke = findImage('team-luke')
+// Madera Archery Range — Results page "Recent Project" card.
+// Drop both to enable the drag-to-reveal before/after slider; drop only one
+// to show it as a single image.
+export const archeryBefore = findImage('archery-before')
+export const archeryAfter = findImage('archery-after')
 
 // ---- Video slots ---------------------------------------------------------
 // Home hero background video (overrides hero image when present)
 export const heroVideo = findVideo('hero')
-
-// About-page "Goat Cam" placeholder slot — drop goat-cam.mp4 to fill it
-export const goatCam = findVideo('goat-cam')
 
 // ---- Manifest used by the /assets preview page ---------------------------
 // Every drop slot the site knows about, with where it appears.
@@ -66,54 +61,27 @@ export const assetSlots = [
     label: 'Home hero background',
     page: 'Home — top hero',
     accepts: ['image', 'video'],
-    filenames: ['hero.jpg', 'hero.mp4', 'hero.webm'],
-    recommended: '≥ 1920×1080, landscape (16:9 or wider). Video: ≤ 10 MB, muted, ~10s loop.',
+    filenames: ['hero.mp4', 'hero.jpg'],
+    recommended: 'Compressed looping video (≤ 10 MB, ~10s, muted, H.264). Drop a hero.jpg too — it shows as the still poster on slow connections and on devices that block autoplay.',
     image: hero,
     video: heroVideo,
   },
   {
-    key: 'archery-range',
-    label: 'Madera Archery Range photo',
-    page: 'Results — Recent Project card',
+    key: 'archery-before',
+    label: 'Madera Archery Range — BEFORE',
+    page: 'Results — Recent Project card (before)',
     accepts: ['image'],
-    filenames: ['archery-range.jpg'],
-    recommended: '≥ 1200×800, landscape (3:2 or 16:9). Before/after, wide shot of the cleared zone, or the herd at work — anything that shows the project.',
-    image: archeryRange,
+    filenames: ['archery-before.jpg'],
+    recommended: '≥ 1200×800, landscape (16:9). Same framing as the after photo so the slider lines up cleanly.',
+    image: archeryBefore,
   },
   {
-    key: 'team-jim',
-    label: 'Headshot — Jim Guggenhime',
-    page: 'About — Team card',
+    key: 'archery-after',
+    label: 'Madera Archery Range — AFTER',
+    page: 'Results — Recent Project card (after)',
     accepts: ['image'],
-    filenames: ['team-jim.jpg'],
-    recommended: '≥ 600×600, square crop. Shoulders-up, neutral background.',
-    image: teamJim,
-  },
-  {
-    key: 'team-ryan',
-    label: 'Headshot — Ryan Bartusek',
-    page: 'About — Team card',
-    accepts: ['image'],
-    filenames: ['team-ryan.jpg'],
-    recommended: '≥ 600×600, square crop.',
-    image: teamRyan,
-  },
-  {
-    key: 'team-luke',
-    label: 'Headshot — Luke Adams',
-    page: 'About — Team card',
-    accepts: ['image'],
-    filenames: ['team-luke.jpg'],
-    recommended: '≥ 600×600, square crop.',
-    image: teamLuke,
-  },
-  {
-    key: 'goat-cam',
-    label: 'Goat Cam',
-    page: 'About — Goat Cam block',
-    accepts: ['video'],
-    filenames: ['goat-cam.mp4', 'goat-cam.webm'],
-    recommended: '16:9, ≤ 20 MB, muted loop. Falls back to "coming soon" tile if absent.',
-    video: goatCam,
+    filenames: ['archery-after.jpg'],
+    recommended: '≥ 1200×800, landscape (16:9). Same framing as the before photo so the slider lines up cleanly.',
+    image: archeryAfter,
   },
 ]

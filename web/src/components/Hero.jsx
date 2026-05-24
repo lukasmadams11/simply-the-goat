@@ -28,7 +28,7 @@ export default function Hero({ eyebrow, headline, sub, children }) {
         )}
         <div
           aria-hidden="true"
-          className="absolute inset-0 bg-gradient-to-b from-cream/20 via-transparent to-cream"
+          className="absolute inset-0 bg-gradient-to-br from-cream/65 via-cream/15 to-cream"
         />
       </div>
 

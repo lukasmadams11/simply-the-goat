@@ -1,7 +1,6 @@
 import { Flame, Heart, Video } from 'lucide-react'
 import SectionHeader from '../components/SectionHeader'
 import Seo from '../components/Seo'
-import { teamJim, teamRyan, teamLuke } from '../assets/images'
 
 const comparison = [
   {
@@ -39,7 +38,6 @@ const comparison = [
 const founder = {
   name: 'Jim Guggenhime',
   role: 'Founder & Director of Operations',
-  photo: teamJim,
   body: `Jim is a California native who brings a wealth of hands-on experience in targeted goat grazing for fire mitigation, brush clearing, and weed management. His dedication to sustainable land management began while teaching in East Africa, where he observed how hardy goats naturally cleared dense overgrowth, inspiring a lifelong mission to deploy their grazing instincts as a powerful tool for community wildfire resilience. Following his time abroad, Jim graduated from the University of Colorado and launched his first goat grazing business near his alma mater in 2002. He went on to spearhead complex hazardous fuel reduction and targeted weed management projects for private landowners, high-profile institutions like University of Colorado Boulder, and public agencies including Colorado Highway Services and Boulder Parks and Recreation. His environmentally conscious approach to vegetation management and fire prevention earned him recognition in major publications, including the LA Times. After pausing his grazing career to raise his family in Colorado, Jim watched California's escalating wildfire crisis from afar and knew it was time to return. He is now back in his home state with a clear mission: to help fortify communities against the devastating threat of wildfire by deploying traditional grazing practices and modern land-management technologies across California's vulnerable landscapes.`,
 }
 
@@ -47,13 +45,11 @@ const team = [
   {
     name: 'Ryan Bartusek',
     role: 'sUAS Data Collector',
-    photo: teamRyan,
     body: `Ryan architects the aerial intelligence network that drives our deployments. Operating between our hubs in the Colorado Front Range and the Sierra Nevada foothills, he specializes in Drone-in-a-Box (DiaB) operations, geospatial analysis, and custom Python-driven AI modeling. By processing real-time LiDAR and photogrammetry, Ryan ensures our biological mitigation units are deployed with exact, mathematically verified precision.`,
   },
   {
     name: 'Luke Adams',
     role: 'sUAS Data Collector & Biological Operations Lead',
-    photo: teamLuke,
     body: `Luke bridges the critical gap between aerial telemetry and ground-level execution. While he engineers the same advanced drone mapping and geospatial modeling as the rest of the sUAS team, Luke's expertise extends directly into the herd. He serves as our hands-on tactical liaison, ensuring our biological mitigation units move in perfect synchronization with our topographic data.`,
   },
 ]
@@ -152,55 +148,33 @@ export default function About() {
             eyebrow="The Team"
             title="People who answer the phone."
           />
-          <article className="mt-12 bg-cream border border-forest/15 p-8 md:p-10 flex flex-col md:flex-row gap-8">
-            {founder.photo && (
-              <div className="shrink-0 mx-auto md:mx-0 w-32 h-32 md:w-36 md:h-36 rounded-full overflow-hidden bg-forest/5">
-                <img
-                  src={founder.photo}
-                  alt={`Portrait of ${founder.name}`}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-            )}
-            <div className="flex-1 min-w-0">
-              <p className="font-sans text-xs font-semibold uppercase tracking-widest text-ochre">
-                {founder.role}
-              </p>
-              <h3 className="mt-2 font-serif text-3xl text-forest">
-                {founder.name}
-              </h3>
-              <p className="mt-4 font-sans text-slate/80 leading-relaxed">
-                {founder.body}
-              </p>
-            </div>
+          <article className="mt-12 bg-cream border border-forest/15 p-8 md:p-10">
+            <p className="font-sans text-xs font-semibold uppercase tracking-widest text-ochre">
+              {founder.role}
+            </p>
+            <h3 className="mt-2 font-serif text-3xl text-forest">
+              {founder.name}
+            </h3>
+            <p className="mt-4 font-sans text-slate/80 leading-relaxed">
+              {founder.body}
+            </p>
           </article>
 
           <div className="mt-6 grid md:grid-cols-2 gap-6">
             {team.map((m) => (
               <article
                 key={m.name}
-                className="bg-cream border border-forest/10 p-8 flex gap-6"
+                className="bg-cream border border-forest/10 p-8"
               >
-                {m.photo && (
-                  <div className="shrink-0 w-20 h-20 rounded-full overflow-hidden bg-forest/5">
-                    <img
-                      src={m.photo}
-                      alt={`Portrait of ${m.name}`}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                )}
-                <div className="flex-1 min-w-0">
-                  <p className="font-sans text-xs font-semibold uppercase tracking-widest text-ochre">
-                    {m.role}
-                  </p>
-                  <h3 className="mt-2 font-serif text-2xl text-forest">
-                    {m.name}
-                  </h3>
-                  <p className="mt-4 font-sans text-slate/80 leading-relaxed">
-                    {m.body}
-                  </p>
-                </div>
+                <p className="font-sans text-xs font-semibold uppercase tracking-widest text-ochre">
+                  {m.role}
+                </p>
+                <h3 className="mt-2 font-serif text-2xl text-forest">
+                  {m.name}
+                </h3>
+                <p className="mt-4 font-sans text-slate/80 leading-relaxed">
+                  {m.body}
+                </p>
               </article>
             ))}
           </div>

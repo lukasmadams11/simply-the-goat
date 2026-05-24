@@ -10,14 +10,10 @@ If a file isn't here, the site falls back to a placeholder or hides the photo gr
 
 | Drop a file named… | Type | Where it appears | Recommended size |
 |---|---|---|---|
-| `hero.jpg` | image | Home hero background (also used as the video poster) | ≥ 1920×1080, landscape |
-| `hero.mp4` | **video** | Home hero background — overrides `hero.jpg` when present | 16:9, ≤ 10 MB, ~10s loop, muted |
-| `archery-range.jpg` | image | Results page — Madera Archery Range "Recent Project" card | ≥ 1200×800 landscape (3:2 or 16:9) |
-| `team-jim.jpg` | image | About page — Jim Guggenhime team card | ≥ 600×600, square, shoulders-up |
-| `team-ethan.jpg` | image | About page — Ethan Wenter team card | ≥ 600×600, square |
-| `team-ryan.jpg` | image | About page — Ryan Bartusek team card | ≥ 600×600, square |
-| `team-luke.jpg` | image | About page — Luke Adams team card | ≥ 600×600, square |
-| `goat-cam.mp4` | **video** | About page Goat Cam block | 16:9, ≤ 20 MB, muted loop |
+| `hero.mp4` | **video** | Home hero background — looping behind the headline | 16:9, ≤ 10 MB, ~10s loop, muted, H.264 |
+| `hero.jpg` | image | Home hero still — shown as the video poster (slow connections, autoplay-blocked devices) | ≥ 1920×1080, landscape |
+| `archery-before.jpg` | image | Results page — Madera Archery Range, **before** clearing | ≥ 1200×800 landscape (16:9) |
+| `archery-after.jpg` | image | Results page — Madera Archery Range, **after** clearing | ≥ 1200×800 landscape (16:9) |
 
 ## Rules
 
@@ -35,24 +31,26 @@ If you drop both `hero.jpg` and `hero.mp4`:
 
 So drop both. The image is your safety net.
 
-## Team headshots
+## The Madera Archery before/after
 
-Team cards show photos as a circular crop on the left side of each card. If a `team-*.jpg` file is missing for a person, that card just shows the text-only version (clean, no broken-image icon).
+The Results page renders the archery range as a **drag-to-reveal slider** when BOTH `archery-before.jpg` and `archery-after.jpg` are present. The user grabs the divider and sweeps left/right to compare.
 
-You can drop all four at once or one at a time — they're independent.
+- Drop **only one** of the two → the page shows it as a plain single image.
+- Drop **neither** → no image, just the text card.
+
+For the slider to look right, the two photos should be framed as close to identically as possible (same camera position, same lens, same crop) — that way only the vegetation visibly changes when you sweep.
 
 ## Tips
 
 - Landscape hero photos and videos work best. The bottom of the frame fades to cream for text readability — keep key detail away from the very bottom edge.
-- Headshots look best as tight head-and-shoulders crops at square aspect ratio. Centered, neutral background, good lighting.
-- For the archery range photo: a wide shot showing the cleared parcel, the herd at work, or a before/after composition all work. The card renders it at 3:2 (landscape).
 - You can swap in a new file at any time — replace it with the same filename. Dev server picks up the change without a restart.
 - Visit **`/assets`** in your browser to see live previews of every slot side-by-side.
 
 ## Want more slots?
 
 Say the word and I'll wire up:
+- Team headshots (Jim, Ryan, Luke) — when you have them
+- A live Goat Cam video feed
 - A logo mark for the nav
 - A footer background photo
-- A separate before/after pair for the archery range
-- Additional looping videos (e.g. a Results page atmosphere clip)
+- Additional case study photos / videos for new projects
