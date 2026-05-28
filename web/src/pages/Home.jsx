@@ -4,7 +4,7 @@ import Button from '../components/Button'
 import SectionHeader from '../components/SectionHeader'
 import Seo from '../components/Seo'
 import HillsideSVG from '../components/HillsideSVG'
-import { hero as heroPhoto, heroVideo } from '../assets/images'
+import { hero as heroPhoto, heroVideo, heroVideoAv1 } from '../assets/images'
 
 const pillars = [
   {
@@ -44,7 +44,7 @@ export default function Home() {
         className="fixed inset-0 w-full h-full overflow-hidden pointer-events-none"
         style={{ zIndex: 0 }}
       >
-        {heroVideo ? (
+        {heroVideo || heroVideoAv1 ? (
           <video
             className="w-full h-full object-cover"
             autoPlay
@@ -53,10 +53,14 @@ export default function Home() {
             playsInline
             poster={heroPhoto || undefined}
           >
-            <source
-              src={heroVideo.src}
-              type={`video/${heroVideo.ext === 'mov' ? 'quicktime' : heroVideo.ext}`}
-            />
+            {/* AV1/WebM first (smaller); browsers that can't decode it fall back to H.264. */}
+            {heroVideoAv1 && <source src={heroVideoAv1.src} type="video/webm" />}
+            {heroVideo && (
+              <source
+                src={heroVideo.src}
+                type={`video/${heroVideo.ext === 'mov' ? 'quicktime' : heroVideo.ext}`}
+              />
+            )}
           </video>
         ) : heroPhoto ? (
           <img src={heroPhoto} alt="" className="w-full h-full object-cover" />

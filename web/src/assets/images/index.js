@@ -65,8 +65,21 @@ export const galleryPairs = [
 ]
 
 // ---- Video slots ---------------------------------------------------------
-// Home hero background video (overrides hero image when present)
+// Home hero background video (overrides hero image when present).
+// findVideo prefers .mp4 (H.264) — kept as the universal fallback source.
 export const heroVideo = findVideo('hero')
+
+// Optional AV1/WebM hero (modern codec, much smaller file). When a hero.webm
+// is present it is offered first; browsers that can't decode AV1 fall back to
+// the H.264 .mp4 above.
+export const heroVideoAv1 = (() => {
+  for (const ext of ['webm', 'WEBM']) {
+    if (videoModules[`./hero.${ext}`]) {
+      return { src: videoModules[`./hero.${ext}`], ext: 'webm' }
+    }
+  }
+  return null
+})()
 
 // ---- Manifest used by the /assets preview page ---------------------------
 // Every drop slot the site knows about, with where it appears.
