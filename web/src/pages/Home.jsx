@@ -91,6 +91,7 @@ export default function Home() {
             target="_blank"
             rel="noopener noreferrer"
             variant="secondary"
+            className="bg-cream/50 backdrop-blur-sm"
           >
             See the Science
           </Button>

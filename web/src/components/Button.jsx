@@ -6,7 +6,7 @@ const base =
 const variants = {
   primary: 'bg-forest text-cream hover:bg-forest/90',
   secondary:
-    'border border-ochre text-ochre bg-transparent hover:bg-ochre hover:text-cream',
+    'border border-ochre text-ochre hover:bg-ochre hover:text-cream',
   ghost: 'text-forest hover:text-ochre',
 }
 
