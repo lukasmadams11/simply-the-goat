@@ -1,4 +1,4 @@
-import { Flame, Heart, Video } from 'lucide-react'
+import { ArrowUpRight, Flame, Heart, Video } from 'lucide-react'
 import SectionHeader from '../components/SectionHeader'
 import Seo from '../components/Seo'
 
@@ -158,6 +158,15 @@ export default function About() {
             <p className="mt-4 font-sans text-slate/80 leading-relaxed">
               {founder.body}
             </p>
+            <a
+              href="https://www.latimes.com/archives/la-xpm-2003-jul-20-na-goats20-story.html"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-6 inline-flex items-center gap-1.5 font-sans text-sm font-semibold text-forest hover:text-ochre transition-colors"
+            >
+              Read the LA&nbsp;Times feature
+              <ArrowUpRight size={16} aria-hidden="true" />
+            </a>
           </article>
 
           <div className="mt-6 grid md:grid-cols-2 gap-6">
