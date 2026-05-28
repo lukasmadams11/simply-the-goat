@@ -14,3 +14,7 @@
 .env
 .env.local
 .env.*.local
+
+# Hero video working files — large 4K master + scratch encodes, keep local only
+/hero-source.*
+/.hero-encodes/
